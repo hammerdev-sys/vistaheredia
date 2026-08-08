@@ -1,104 +1,321 @@
-'use client'
+// 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { Menu, X, ChevronDown } from 'lucide-react'
-import { Logo } from '@/components/brand/logo'
-import { CTALink } from '@/components/brand/cta-link'
-import { LanguageSwitcher } from '@/components/language-switcher'
-import type { Locale } from '@/lib/i18n/config'
-import type { Dictionary } from '@/lib/i18n/dictionaries'
-import { cn } from '@/lib/utils'
+// import { useEffect, useRef, useState } from 'react'
+// import Link from 'next/link'
+// import { usePathname } from 'next/navigation'
+// import { Menu, X, ChevronDown } from 'lucide-react'
+// import { Logo } from '@/components/brand/logo'
+// import { CTALink } from '@/components/brand/cta-link'
+// import { LanguageSwitcher } from '@/components/language-switcher'
+// import type { Locale } from '@/lib/i18n/config'
+// import type { Dictionary } from '@/lib/i18n/dictionaries'
+// import { cn } from '@/lib/utils'
+
+// export function SiteHeader({
+//   locale,
+//   nav,
+// }: {
+//   locale: Locale
+//   nav: Dictionary['nav']
+// }) {
+//   const [open, setOpen] = useState(false)
+//   const [moreOpen, setMoreOpen] = useState(false)
+//   const [scrolled, setScrolled] = useState(false)
+//   const pathname = usePathname()
+//   const moreRef = useRef<HTMLDivElement>(null)
+//   const base = `/${locale}`
+
+//   useEffect(() => {
+//     const onScroll = () => setScrolled(window.scrollY > 16)
+//     onScroll()
+//     window.addEventListener('scroll', onScroll, { passive: true })
+//     return () => window.removeEventListener('scroll', onScroll)
+//   }, [])
+
+//   useEffect(() => {
+//     setOpen(false)
+//     setMoreOpen(false)
+//   }, [pathname])
+
+//   useEffect(() => {
+//     if (!moreOpen) return
+//     const onClick = (e: MouseEvent) => {
+//       if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+//         setMoreOpen(false)
+//       }
+//     }
+//     window.addEventListener('mousedown', onClick)
+//     return () => window.removeEventListener('mousedown', onClick)
+//   }, [moreOpen])
+
+//   // Primary links shown inline on desktop.
+//   const primaryLinks = [
+//     { href: `${base}/experience`, label: nav.experience },
+//     { href: `${base}/spaces`, label: nav.spaces },
+//     { href: `${base}/rooms`, label: nav.rooms },
+//     { href: `${base}/events`, label: nav.events },
+//   ]
+
+//   // Secondary links tucked into the "More" dropdown on desktop.
+//   // Careers intentionally omitted here — it lives in the "Join Our Team" CTA.
+//   const moreLinks = [
+//     { href: `${base}/story`, label: nav.story },
+//     { href: `${base}/construction`, label: nav.construction },
+//     { href: `${base}/journal`, label: nav.journal },
+//     { href: `${base}/contact`, label: nav.contact },
+//   ]
+
+//   // Mobile shows every destination in one list.
+//   const mobileLinks = [...primaryLinks, ...moreLinks]
+
+//   return (
+//     <header
+//       className={cn(
+//         'sticky top-0 z-50 w-full transition-all duration-300',
+//         scrolled
+//           ? 'border-b border-border bg-background/90 backdrop-blur-md'
+//           : 'border-b border-transparent bg-background/60 backdrop-blur-sm',
+//       )}
+//     >
+//       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 lg:px-8">
+//         <Link href={base} aria-label={siteAria(locale)} className="shrink-0">
+//           <Logo tone="dark" />
+//         </Link>
+
+//         <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
+//           {primaryLinks.map((link) => {
+//             const active = pathname === link.href
+//             return (
+//               <Link
+//                 key={link.href}
+//                 href={link.href}
+//                 className={cn(
+//                   'text-sm font-medium tracking-wide transition-colors hover:text-primary',
+//                   active ? 'text-primary' : 'text-foreground/80',
+//                 )}
+//               >
+//                 {link.label}
+//               </Link>
+//             )
+//           })}
+
+//           <div className="relative" ref={moreRef}>
+//             <button
+//               type="button"
+//               onClick={() => setMoreOpen((v) => !v)}
+//               aria-expanded={moreOpen}
+//               aria-haspopup="true"
+//               className={cn(
+//                 'inline-flex items-center gap-1 text-sm font-medium tracking-wide transition-colors hover:text-primary',
+//                 moreLinks.some((l) => l.href === pathname)
+//                   ? 'text-primary'
+//                   : 'text-foreground/80',
+//               )}
+//             >
+//               {nav.more}
+//               <ChevronDown
+//                 className={cn('h-4 w-4 transition-transform', moreOpen && 'rotate-180')}
+//               />
+//             </button>
+//             {moreOpen && (
+//               <div className="absolute right-0 top-full mt-3 w-52 overflow-hidden rounded-lg border border-border bg-popover py-2 shadow-lg">
+//                 {moreLinks.map((link) => {
+//                   const active = pathname === link.href
+//                   return (
+//                     <Link
+//                       key={link.href}
+//                       href={link.href}
+//                       className={cn(
+//                         'block px-4 py-2.5 text-sm font-medium transition-colors hover:bg-secondary',
+//                         active ? 'text-primary' : 'text-popover-foreground/80',
+//                       )}
+//                     >
+//                       {link.label}
+//                     </Link>
+//                   )
+//                 })}
+//               </div>
+//             )}
+//           </div>
+//         </nav>
+
+//         <div className="hidden items-center gap-3 lg:flex">
+//           <LanguageSwitcher currentLocale={locale} />
+//           <CTALink href={`${base}/careers#open-roles`} variant="outline" size="sm">
+//             {nav.joinTeam}
+//           </CTALink>
+//           <CTALink href={`${base}/pre-booking`} variant="primary" size="sm">
+//             {nav.prebook}
+//           </CTALink>
+//         </div>
+
+//         <button
+//           type="button"
+//           className="inline-flex items-center justify-center rounded-md p-2 text-foreground lg:hidden"
+//           aria-label="Menu"
+//           aria-expanded={open}
+//           onClick={() => setOpen((v) => !v)}
+//         >
+//           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+//         </button>
+//       </div>
+
+//       {open && (
+//         <div className="border-t border-border bg-background lg:hidden">
+//           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4" aria-label="Mobile">
+//             <Link
+//               href={base}
+//               className="rounded-md px-2 py-3 text-base font-medium text-foreground/90 hover:bg-secondary"
+//             >
+//               {nav.home}
+//             </Link>
+//             {mobileLinks.map((link) => (
+//               <Link
+//                 key={link.href}
+//                 href={link.href}
+//                 className="rounded-md px-2 py-3 text-base font-medium text-foreground/90 hover:bg-secondary"
+//               >
+//                 {link.label}
+//               </Link>
+//             ))}
+//             <div className="mt-3 flex flex-col gap-3">
+//               <CTALink href={`${base}/pre-booking`} variant="primary">
+//                 {nav.prebook}
+//               </CTALink>
+//               <CTALink href={`${base}/careers#open-roles`} variant="outline">
+//                 {nav.joinTeam}
+//               </CTALink>
+//               <div className="pt-2">
+//                 <LanguageSwitcher currentLocale={locale} />
+//               </div>
+//             </div>
+//           </nav>
+//         </div>
+//       )}
+//     </header>
+//   )
+// }
+
+// function siteAria(locale: Locale) {
+//   return locale === 'es' ? 'VISTAH Heredia — Inicio' : 'VISTAH Heredia — Home'
+// }
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Compass,
+  Sparkles,
+  BedDouble,
+  Calendar,
+  BookOpen,
+  Building2,
+  FileText,
+  Mail,
+} from "lucide-react";
+import { Logo } from "@/components/brand/logo";
+import { CTALink } from "@/components/brand/cta-link";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
+import { cn } from "@/lib/utils";
 
 export function SiteHeader({
   locale,
   nav,
 }: {
-  locale: Locale
-  nav: Dictionary['nav']
+  locale: Locale;
+  nav: Dictionary["nav"];
 }) {
-  const [open, setOpen] = useState(false)
-  const [moreOpen, setMoreOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const pathname = usePathname()
-  const moreRef = useRef<HTMLDivElement>(null)
-  const base = `/${locale}`
+  const [open, setOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const moreRef = useRef<HTMLDivElement>(null);
+  const base = `/${locale}`;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
-    setOpen(false)
-    setMoreOpen(false)
-  }, [pathname])
+    setOpen(false);
+    setMoreOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
-    if (!moreOpen) return
+    if (!moreOpen) return;
     const onClick = (e: MouseEvent) => {
       if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
-        setMoreOpen(false)
+        setMoreOpen(false);
       }
-    }
-    window.addEventListener('mousedown', onClick)
-    return () => window.removeEventListener('mousedown', onClick)
-  }, [moreOpen])
+    };
+    window.addEventListener("mousedown", onClick);
+    return () => window.removeEventListener("mousedown", onClick);
+  }, [moreOpen]);
 
-  // Primary links shown inline on desktop.
+  // Primary links with assigned icons
   const primaryLinks = [
-    { href: `${base}/experience`, label: nav.experience },
-    { href: `${base}/spaces`, label: nav.spaces },
-    { href: `${base}/rooms`, label: nav.rooms },
-    { href: `${base}/events`, label: nav.events },
-  ]
+    { href: `${base}/experience`, label: nav.experience, icon: Compass },
+    { href: `${base}/spaces`, label: nav.spaces, icon: Sparkles },
+    { href: `${base}/rooms`, label: nav.rooms, icon: BedDouble },
+    { href: `${base}/events`, label: nav.events, icon: Calendar },
+  ];
 
-  // Secondary links tucked into the "More" dropdown on desktop.
-  // Careers intentionally omitted here — it lives in the "Join Our Team" CTA.
+  // Secondary links with assigned icons for the upgraded dropdown
   const moreLinks = [
-    { href: `${base}/story`, label: nav.story },
-    { href: `${base}/construction`, label: nav.construction },
-    { href: `${base}/journal`, label: nav.journal },
-    { href: `${base}/contact`, label: nav.contact },
-  ]
+    { href: `${base}/story`, label: nav.story, icon: BookOpen },
+    { href: `${base}/construction`, label: nav.construction, icon: Building2 },
+    { href: `${base}/journal`, label: nav.journal, icon: FileText },
+    { href: `${base}/contact`, label: nav.contact, icon: Mail },
+  ];
 
-  // Mobile shows every destination in one list.
-  const mobileLinks = [...primaryLinks, ...moreLinks]
+  const mobileLinks = [...primaryLinks, ...moreLinks];
 
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300',
+        "sticky top-0 z-50 w-full transition-all duration-300",
         scrolled
-          ? 'border-b border-border bg-background/90 backdrop-blur-md'
-          : 'border-b border-transparent bg-background/60 backdrop-blur-sm',
+          ? "border-b border-border/60 bg-background/80 shadow-sm backdrop-blur-xl"
+          : "border-b border-transparent bg-background/40 backdrop-blur-md",
       )}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 lg:px-8">
-        <Link href={base} aria-label={siteAria(locale)} className="shrink-0">
+        <Link
+          href={base}
+          aria-label={siteAria(locale)}
+          className="shrink-0 transition-opacity hover:opacity-90"
+        >
           <Logo tone="dark" />
         </Link>
 
+        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
           {primaryLinks.map((link) => {
-            const active = pathname === link.href
+            const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'text-sm font-medium tracking-wide transition-colors hover:text-primary',
-                  active ? 'text-primary' : 'text-foreground/80',
+                  "text-sm font-medium tracking-wide transition-colors hover:text-primary",
+                  active ? "text-primary font-semibold" : "text-foreground/80",
                 )}
               >
                 {link.label}
               </Link>
-            )
+            );
           })}
 
+          {/* Upgraded Dropdown */}
           <div className="relative" ref={moreRef}>
             <button
               type="button"
@@ -106,42 +323,69 @@ export function SiteHeader({
               aria-expanded={moreOpen}
               aria-haspopup="true"
               className={cn(
-                'inline-flex items-center gap-1 text-sm font-medium tracking-wide transition-colors hover:text-primary',
+                "group inline-flex items-center gap-1.5 text-sm font-medium tracking-wide transition-colors hover:text-primary",
                 moreLinks.some((l) => l.href === pathname)
-                  ? 'text-primary'
-                  : 'text-foreground/80',
+                  ? "text-primary font-semibold"
+                  : "text-foreground/80",
               )}
             >
               {nav.more}
               <ChevronDown
-                className={cn('h-4 w-4 transition-transform', moreOpen && 'rotate-180')}
+                className={cn(
+                  "h-4 w-4 transition-transform duration-200 group-hover:text-primary",
+                  moreOpen && "rotate-180 text-primary",
+                )}
               />
             </button>
+
             {moreOpen && (
-              <div className="absolute right-0 top-full mt-3 w-52 overflow-hidden rounded-lg border border-border bg-popover py-2 shadow-lg">
-                {moreLinks.map((link) => {
-                  const active = pathname === link.href
-                  return (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className={cn(
-                        'block px-4 py-2.5 text-sm font-medium transition-colors hover:bg-secondary',
-                        active ? 'text-primary' : 'text-popover-foreground/80',
-                      )}
-                    >
-                      {link.label}
-                    </Link>
-                  )
-                })}
+              <div className="absolute right-0 top-full mt-3 w-64 origin-top-right overflow-hidden rounded-2xl border border-border/80 bg-popover/95 p-2 shadow-2xl backdrop-blur-2xl animate-in fade-in zoom-in-95 duration-150">
+                <div className="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/70">
+                  Discover More
+                </div>
+                <div className="space-y-1">
+                  {moreLinks.map((link) => {
+                    const active = pathname === link.href;
+                    const IconComponent = link.icon;
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={cn(
+                          "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-150",
+                          active
+                            ? "bg-primary/10 text-primary font-semibold"
+                            : "text-popover-foreground/80 hover:bg-secondary/80 hover:text-foreground",
+                        )}
+                      >
+                        <div
+                          className={cn(
+                            "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border shadow-xs transition-colors",
+                            active
+                              ? "border-[var(--primary)] bg-[var(--primary)] text-white"
+                              : "border-[var(--primary)]/30 bg-[var(--primary)]/10 text-[var(--primary)]",
+                          )}
+                        >
+                          <IconComponent className="h-4 w-4" />
+                        </div>
+                        <span>{link.label}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </div>
         </nav>
 
+        {/* Desktop Actions */}
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher currentLocale={locale} />
-          <CTALink href={`${base}/careers#open-roles`} variant="outline" size="sm">
+          <CTALink
+            href={`${base}/careers#open-roles`}
+            variant="outline"
+            size="sm"
+          >
             {nav.joinTeam}
           </CTALink>
           <CTALink href={`${base}/pre-booking`} variant="primary" size="sm">
@@ -149,43 +393,60 @@ export function SiteHeader({
           </CTALink>
         </div>
 
+        {/* Mobile Hamburger Button */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-foreground lg:hidden"
+          className="inline-flex items-center justify-center rounded-xl border border-border/40 bg-secondary/50 p-2.5 text-foreground transition-colors hover:bg-secondary lg:hidden"
           aria-label="Menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
+      {/* Mobile Menu Dropdown */}
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4" aria-label="Mobile">
+        <div className="border-t border-border/60 bg-background/95 backdrop-blur-2xl lg:hidden animate-in slide-in-from-top-2 duration-200">
+          <nav
+            className="mx-auto flex max-w-7xl flex-col gap-1 px-6 py-6"
+            aria-label="Mobile"
+          >
             <Link
               href={base}
-              className="rounded-md px-2 py-3 text-base font-medium text-foreground/90 hover:bg-secondary"
+              className="rounded-xl px-3 py-3 text-base font-medium text-foreground/90 transition-colors hover:bg-secondary"
             >
               {nav.home}
             </Link>
-            {mobileLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="rounded-md px-2 py-3 text-base font-medium text-foreground/90 hover:bg-secondary"
+            {mobileLinks.map((link) => {
+              const IconComponent = link.icon;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="flex items-center gap-3 rounded-xl px-3 py-3 text-base font-medium text-foreground/90 transition-colors hover:bg-secondary"
+                >
+                  <IconComponent className="h-5 w-5 text-muted-foreground" />
+                  <span>{link.label}</span>
+                </Link>
+              );
+            })}
+            <div className="mt-4 flex flex-col gap-3 pt-4 border-t border-border/60">
+              <CTALink
+                href={`${base}/pre-booking`}
+                variant="primary"
+                className="w-full justify-center"
               >
-                {link.label}
-              </Link>
-            ))}
-            <div className="mt-3 flex flex-col gap-3">
-              <CTALink href={`${base}/pre-booking`} variant="primary">
                 {nav.prebook}
               </CTALink>
-              <CTALink href={`${base}/careers#open-roles`} variant="outline">
+              <CTALink
+                href={`${base}/careers#open-roles`}
+                variant="outline"
+                className="w-full justify-center"
+              >
                 {nav.joinTeam}
               </CTALink>
-              <div className="pt-2">
+              <div className="pt-2 flex justify-center">
                 <LanguageSwitcher currentLocale={locale} />
               </div>
             </div>
@@ -193,9 +454,9 @@ export function SiteHeader({
         </div>
       )}
     </header>
-  )
+  );
 }
 
 function siteAria(locale: Locale) {
-  return locale === 'es' ? 'VISTAH Heredia — Inicio' : 'VISTAH Heredia — Home'
+  return locale === "es" ? "VISTAH Heredia — Inicio" : "VISTAH Heredia — Home";
 }

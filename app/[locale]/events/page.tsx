@@ -38,7 +38,7 @@ export default async function EventsPage({
   const upcoming = getUpcomingEvents()
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <PageHero
         kicker={t.kicker}
         title={t.title}
@@ -49,8 +49,16 @@ export default async function EventsPage({
 
       <section className="py-20 md:py-28">
         <Container>
-          <h2 className="font-serif text-3xl text-foreground md:text-4xl">{t.upcomingTitle}</h2>
-          <div className="mt-8">
+          <div className="flex flex-col gap-4 mb-12">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+              {t.kicker}
+            </span>
+            <h2 className="font-serif text-3xl text-foreground md:text-4xl tracking-tight">
+              {t.upcomingTitle}
+            </h2>
+          </div>
+
+          <div className="rounded-2xl border border-border/80 bg-card p-6 md:p-8 shadow-sm">
             <EventsCalendar
               events={upcoming}
               locale={l}
@@ -63,6 +71,6 @@ export default async function EventsPage({
           </div>
         </Container>
       </section>
-    </>
+    </div>
   )
 }
