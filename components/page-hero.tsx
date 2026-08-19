@@ -15,7 +15,9 @@ export function PageHero({
   imageAlt: string
 }) {
   return (
-    <section className="relative flex min-h-[52vh] items-end overflow-hidden md:min-h-[60vh]">
+    <section className="relative flex min-h-[680px] items-center justify-center overflow-hidden md:min-h-[760px]">
+
+      {/* Background Image */}
       <Image
         src={image || "/placeholder.svg"}
         alt={imageAlt}
@@ -24,17 +26,51 @@ export function PageHero({
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/45 to-charcoal/30" />
-      <Container className="relative z-10 pb-14 pt-28 md:pb-20">
-        <Kicker tone="light">{kicker}</Kicker>
-        <h1 className="mt-4 max-w-3xl text-balance font-serif text-4xl leading-[1.05] text-cream md:text-5xl lg:text-6xl">
+
+      {/* Image Overlay */}
+      <div className="absolute inset-0 bg-black/45" />
+
+      {/* Bottom Dark Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/25 to-black/60" />
+
+      {/* Content */}
+      <Container className="relative z-10 w-full py-24 text-center md:py-28">
+
+        {/* Kicker */}
+        <div className="flex justify-center">
+          <Kicker tone="light">
+            {kicker}
+          </Kicker>
+        </div>
+
+        {/* Main Title */}
+        <h1 className="mx-auto mt-5 max-w-5xl text-balance font-serif text-4xl uppercase leading-tight tracking-[0.06em] text-cream sm:text-5xl md:text-6xl lg:text-7xl">
           {title}
         </h1>
+
+        {/* Decorative Line */}
+        <div className="mx-auto mt-10 flex w-full max-w-4xl items-center">
+          <div className="relative h-px w-full bg-cream/90">
+
+            {/* Dot 1 */}
+            <span className="absolute left-1/4 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cream" />
+
+            {/* Dot 2 */}
+            <span className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cream" />
+
+            {/* Dot 3 */}
+            <span className="absolute left-3/4 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cream" />
+
+          </div>
+        </div>
+
+        {/* Intro */}
         {intro && (
-          <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-cream/85">
+          <p className="mx-auto mt-12 max-w-4xl text-pretty text-base leading-relaxed tracking-wide text-cream/90 sm:text-lg md:text-xl lg:text-[21px]">
             {intro}
           </p>
         )}
+
       </Container>
     </section>
   )

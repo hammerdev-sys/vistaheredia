@@ -81,16 +81,16 @@ export const es: Dictionary = {
   story: {
     kicker: 'Nuestra Historia',
     title: 'El significado de VISTAH',
-    intro:
-      'VISTAH es más que un nombre — es una promesa presente en cada piso, vista y encuentro. Arraigado en Heredia y elevado por la Tapestry Collection by Hilton, refleja un destino diseñado en torno a las personas.',
+   intro:
+  'VISTAH representa la idea de mirar como una forma de conexión. Representa las múltiples capas del contexto que lo rodea, desde las montañas y el paisaje natural hasta la vida urbana, la actividad cultural y la energía colectiva del estadio.\n\nMás que un único panorama, VISTAH propone una secuencia de perspectivas que revelan la identidad de Heredia. Cada espacio enmarca una relación diferente con su entorno, permitiendo experimentar la ciudad no como un simple telón de fondo, sino como una presencia activa y en constante evolución.',
     acronymTitle: 'V·I·S·T·A·H',
     acronym: [
-      { letter: 'V', word: 'Vista', body: 'Perspectivas dramáticas hacia el estadio, la ciudad y las montañas desde cada ángulo.' },
-      { letter: 'I', word: 'Integración', body: 'Entretejido de forma fluida con el estadio y la vida diaria de Heredia.' },
-      { letter: 'S', word: 'Seguridad', body: 'Un lugar de confort, confianza y auténtica hospitalidad costarricense.' },
-      { letter: 'T', word: 'Trascendencia', body: 'Una experiencia que se eleva por encima de la estadía ordinaria.' },
-      { letter: 'A', word: 'Activación', body: 'Espacios que cobran vida en cada hora y en cada evento.' },
-      { letter: 'H', word: 'Heredia', body: 'Orgullosamente de esta ciudad — la Ciudad de las Flores y su espíritu colectivo.' },
+      { letter: 'V', word: 'VINCULACIÓN', body: 'Conecta personas, espacios y ciudad en una misma experiencia compartida.' },
+      { letter: 'I', word: 'INTEGRACIÓN', body: 'Una relación fluida entre el interior y el exterior.' },
+      { letter: 'S', word: 'SEGURIDAD', body: ' Una sensación de confort, confianza y bienestar dentro de la experiencia.' },
+      { letter: 'T', word: 'TRASCENDENCIA', body: 'Momentos que permanecen más allá de la estancia.' },
+      { letter: 'A', word: 'ACTIVACIÓN', body: ' Espacios que evolucionan y se activan a lo largo del día.' },
+      { letter: 'H', word: 'HERDIA', body: ' Representa la esencia de Heredia, anclando la experiencia en su cultura.' },
     ],
     valuesKicker: 'Valores de marca',
     valuesTitle: 'Comunidad, celebración, pasión, hospitalidad',

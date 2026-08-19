@@ -42,7 +42,7 @@ export default async function StoryPage({
         kicker={t.kicker}
         title={t.title}
         intro={t.intro}
-        image="/images/heredia-city.png"
+        image="/images/view3.jpeg"
         imageAlt="Heredia, the City of Flowers, at golden hour"
       />
 
@@ -77,39 +77,54 @@ export default async function StoryPage({
       </section>
 
       {/* Stadium connection */}
-      <section className="relative overflow-hidden py-32 md:py-40">
-        <Image
-          src="/images/hero-stadium.png"
-          alt="VISTAH Heredia integrated with the stadium at dusk"
-          fill
-          sizes="100vw"
-          className="object-cover transform scale-105 transition-transform duration-1000"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/85 to-charcoal/70" />
-        <Container className="relative z-10">
-          <div className="max-w-2xl">
-            <Kicker tone="light" className="mb-3 inline-block rounded-full bg-white/10 px-4 py-1 backdrop-blur-md border border-white/15">
-              {t.stadiumKicker}
-            </Kicker>
-            <h2 className="mt-4 text-balance font-serif text-3xl leading-tight text-cream md:text-5xl lg:text-[3.25rem] tracking-tight">
-              {t.stadiumTitle}
-            </h2>
-            <p className="mt-6 text-pretty text-lg leading-relaxed text-cream/80">
-              {t.stadiumBody}
-            </p>
-            
-            <div className="mt-8">
-              <Link 
-                href={`/${locale}/contact`}
-                className="group inline-flex items-center gap-3 rounded-full bg-champagne px-7 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:bg-cream hover:shadow-lg hover:shadow-champagne/20 active:scale-95"
-              >
-                <span>Discover Spaces</span>
-                <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
+      {/* Stadium connection */}
+<section className="relative min-h-[650px] overflow-hidden py-32 md:min-h-[720px] md:py-40">
+
+  {/* Stadium Background */}
+  <Image
+    src="/images/stadium-connection.png"
+    alt="VISTAH Heredia integrated with the stadium and surrounding landscape"
+    fill
+    sizes="100vw"
+    className="object-cover object-center"
+  />
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/65 to-charcoal/30" />
+
+  <Container className="relative z-10 flex min-h-[500px] items-center">
+    <div className="max-w-2xl">
+
+      <Kicker
+        tone="light"
+        className="mb-3 inline-block rounded-full border border-white/15 bg-white/10 px-4 py-1 backdrop-blur-md"
+      >
+        {t.stadiumKicker}
+      </Kicker>
+
+      <h2 className="mt-4 text-balance font-serif text-3xl leading-tight tracking-tight text-cream md:text-5xl lg:text-[3.25rem]">
+        {t.stadiumTitle}
+      </h2>
+
+      <p className="mt-6 text-pretty text-lg leading-relaxed text-cream/85">
+        {t.stadiumBody}
+      </p>
+
+      <div className="mt-8">
+        <Link
+          href={`/${locale}/contact`}
+          className="group inline-flex items-center gap-3 rounded-full bg-champagne px-7 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:bg-cream hover:shadow-lg hover:shadow-champagne/20 active:scale-95"
+        >
+          <span>Discover Spaces</span>
+          <span className="transition-transform duration-300 group-hover:translate-x-1.5">
+            →
+          </span>
+        </Link>
+      </div>
+
+    </div>
+  </Container>
+</section>
 
       {/* Values */}
       <section className="bg-secondary/50 py-24 md:py-32">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowLeft, Check, Download, Users } from "lucide-react"
 import { isLocale, locales, type Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n/dictionaries"
@@ -190,7 +191,10 @@ export default async function SpaceDetailPage({
             </div>
           </Container>
         </section>
+        
       )}
+      {/* Space Gallery */}
+
     </div>
   )
 }

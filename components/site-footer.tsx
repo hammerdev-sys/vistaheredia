@@ -129,6 +129,7 @@ export function SiteFooter({
     { href: `${base}/experience`, label: nav.experience },
     { href: `${base}/spaces`, label: nav.spaces },
     { href: `${base}/rooms`, label: nav.rooms },
+    { href: `${base}/food-beverage`, label: "Food & Beverage" },
     { href: `${base}/journal`, label: nav.journal },
     { href: `${base}/events`, label: nav.events },
     { href: `${base}/story`, label: nav.story },
@@ -147,8 +148,11 @@ export function SiteFooter({
           {/* Brand Info */}
           <div className="flex max-w-sm flex-col justify-between">
             <div>
-              <Logo tone="light" />
-
+              <img
+                src="/images/logo-footer.png"
+                alt="VISTAH"
+                className="h-24 w-auto object-contain"
+              />
               <p className="mt-6 text-sm leading-relaxed text-cream/70 text-pretty">
                 {footer.statement}
               </p>
