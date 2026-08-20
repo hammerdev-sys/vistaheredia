@@ -213,6 +213,7 @@ export const spaceDetails: Record<string, SpaceDetail> = {
     gallery: [
       { type: "image", src: "/images/guest-room.png", alt: { en: "Guest room interior", es: "Interior de la habitación" } },
       { type: "image", src: "/images/room-signature.png", alt: { en: "Guest room with city view", es: "Habitación con vista a la ciudad" } },
+      { type: "image", src: "/images/Banro.jpg", alt: { en: "En-suite bathroom with terrazzo floor", es: "Baño con piso de terrazo" } },
     ],
     highlights: [
       { en: "Contemporary rooms with dramatic views", es: "Habitaciones contemporáneas con vistas dramáticas" },

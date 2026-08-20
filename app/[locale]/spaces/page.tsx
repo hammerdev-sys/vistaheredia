@@ -10,6 +10,16 @@ import { Container, Kicker } from "@/components/section"
 import { Reveal } from "@/components/reveal"
 import { CTALink } from "@/components/brand/cta-link"
 import { cn } from "@/lib/utils"
+import { SpacesGalleryCarousel } from "@/components/spaces-gallery-carousel"
+
+const gallerySpaceImages = [
+  { src: "/images/AZO_bar.jpg", alt: "Azo Lounge Bar rooftop terrace at VISTAH" },
+  { src: "/images/AZO_PISCINA .jpg", alt: "Azo Piscina rooftop infinity pool at VISTAH" },
+  { src: "/images/CORNER.jpg", alt: "The Corner sports bar terrace at VISTAH" },
+  { src: "/images/lobby.png", alt: "VISTAH guest room with wardrobe" },
+  { src: "/images/room-corner.png", alt: "VISTAH guest room with workspace" },
+  { src: "/images/skyroom.png", alt: "VISTAH en-suite bathroom" },
+]
 
 const spaceImages: Record<string, string> = {
   rooms: "/images/guest-room.png",
@@ -279,10 +289,9 @@ export default async function SpacesPage({
       </div>
 
       {/* ================================================== */}
-      {/* NEW GALLERY SECTION */}
+      {/* SPACE GALLERY */}
       {/* ================================================== */}
 
-     {/* Space Gallery */}
 <section className="border-t border-border bg-secondary/30 py-20 md:py-28">
   <Container>
 
@@ -299,145 +308,8 @@ export default async function SpacesPage({
       </p>
     </div>
 
-    {/* Gallery Grid */}
-    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-
-      {/* Ballroom */}
-      <Reveal delay={0} className="group">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-          <Image
-            src="/images/ballroom3.png"
-            alt="VISTAH Ballroom"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
-        </div>
-      </Reveal>
-
-      {/* Ballroom 2 */}
-      <Reveal delay={70} className="group">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-          <Image
-            src="/images/ballroom-2.png"
-            alt="VISTAH Ballroom interior"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
-        </div>
-      </Reveal>
-
-      {/* Ballroom 3 */}
-      <Reveal delay={140} className="group">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-          <Image
-            src="/images/ballroom.png"
-            alt="VISTAH Ballroom space"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
-        </div>
-      </Reveal>
-
-      {/* Rooftop */}
-      <Reveal delay={210} className="group">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-          <Image
-            src="/images/rooftop.png"
-            alt="VISTAH Rooftop"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
-        </div>
-      </Reveal>
-
-      {/* Champion */}
-      <Reveal delay={280} className="group">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-          <Image
-            src="/images/champion.png"
-            alt="VISTAH Champions Corner"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
-        </div>
-      </Reveal>
-
-      {/* Lobby */}
-      <Reveal delay={350} className="group">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-          <Image
-            src="/images/lobby.png"
-            alt="VISTAH Lobby"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
-        </div>
-      </Reveal>
-
-      {/* Guest Room */}
-      <Reveal delay={420} className="group">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-          <Image
-            src="/images/guest-room.png"
-            alt="VISTAH Guest Room"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
-        </div>
-      </Reveal>
-
-      {/* Skyroom */}
-      <Reveal delay={490} className="group">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-          <Image
-            src="/images/skyroom.png"
-            alt="VISTAH Skyroom"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
-        </div>
-      </Reveal>
-
-      {/* Azo Dreamit */}
-      <Reveal delay={560} className="group">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-          <Image
-            src="/images/lobby.png"
-            alt="Azo Dreamit at VISTAH Heredia"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
-        </div>
-      </Reveal>
-
-    </div>
+    {/* Gallery Carousel */}
+    <SpacesGalleryCarousel images={gallerySpaceImages} />
   </Container>
 </section>
     </>

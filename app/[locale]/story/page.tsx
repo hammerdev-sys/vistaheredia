@@ -239,47 +239,155 @@ export default async function StoryPage({
          STADIUM CONNECTION
       ===================================================== */}
       <section className="overflow-hidden bg-background">
-        <div className="relative min-h-[650px] overflow-hidden md:min-h-[720px]">
-          <Image
-            src="/images/stadium-connection.png"
-            alt="VISTAH Heredia integrated with the stadium and surrounding landscape"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/65 to-charcoal/30" />
-          <Container className="relative z-10 flex min-h-[650px] items-center md:min-h-[720px]">
-            <div className="max-w-2xl">
-              <Kicker
-                tone="light"
-                className="mb-3 inline-block rounded-full border border-white/15 bg-white/10 px-4 py-1 backdrop-blur-md"
-              >
-                {t.stadiumKicker}
-              </Kicker>
-              <h2 className="mt-4 text-balance font-serif text-3xl leading-tight tracking-tight text-cream md:text-5xl lg:text-[3.25rem]">
-                {t.stadiumTitle}
-              </h2>
-              <p className="mt-6 text-pretty text-lg leading-relaxed text-cream/85">
-                {t.stadiumBody}
-              </p>
-              <div className="mt-8">
-                <Link
-                  href={`/${locale}/contact`}
-                  className="group inline-flex items-center gap-3 rounded-full bg-champagne px-7 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:bg-cream hover:shadow-lg hover:shadow-champagne/20 active:scale-95"
+  <div className="relative min-h-[700px] overflow-hidden md:min-h-[760px]">
+
+    {/* Background Image */}
+    <Image
+      src="/images/stadium-connection.png"
+      alt="VISTAH Heredia integrated with the stadium and surrounding landscape"
+      fill
+      sizes="100vw"
+      className="object-cover object-center"
+      priority
+    />
+
+    {/* Dark Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/35" />
+
+    {/* Main Content */}
+    <Container className="relative z-10 min-h-[700px] md:min-h-[760px]">
+
+      <div className="flex min-h-[700px] items-center py-20 md:min-h-[760px] md:py-24">
+
+        <div className="grid w-full items-center gap-12 lg:grid-cols-[1fr_420px] lg:gap-16">
+
+          {/* LEFT CONTENT */}
+          <div className="max-w-2xl">
+
+            <Kicker
+              tone="light"
+              className="mb-4 inline-block rounded-full border border-white/15 bg-white/10 px-4 py-1.5 backdrop-blur-md"
+            >
+              {t.stadiumKicker}
+            </Kicker>
+
+            <h2 className="mt-4 max-w-xl text-balance font-serif text-4xl leading-tight tracking-tight text-cream md:text-5xl lg:text-[3.5rem]">
+              {t.stadiumTitle}
+            </h2>
+
+            {/* Paragraphs */}
+            <div className="mt-7 max-w-xl space-y-5 text-pretty text-base leading-relaxed text-cream/85 md:text-lg">
+              {t.stadiumBody.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
+
+            {/* Spaces */}
+            <div className="mt-7 flex flex-wrap gap-2.5">
+              {t.stadiumSpaces.map((space) => (
+                <span
+                  key={space}
+                  className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.12em] text-cream/90 backdrop-blur-sm"
                 >
-                  <span>Discover Spaces</span>
-                  <span className="transition-transform duration-300 group-hover:translate-x-1.5">
-                    →
+                  {space}
+                </span>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-8">
+              <Link
+                href={`/${locale}/contact`}
+                className="group inline-flex items-center gap-3 rounded-full bg-champagne px-7 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:bg-cream hover:shadow-lg hover:shadow-champagne/20 active:scale-95"
+              >
+                <span>Discover Spaces</span>
+
+                <span className="transition-transform duration-300 group-hover:translate-x-1.5">
+                  →
+                </span>
+              </Link>
+            </div>
+
+          </div>
+
+          {/* RIGHT IMAGE + INFO CARDS */}
+          <div className="hidden space-y-5 lg:block">
+
+            {/* CARD 01 */}
+            <div className="group overflow-hidden rounded-2xl border border-white/15 bg-black/30 shadow-2xl backdrop-blur-sm">
+
+              <div className="grid grid-cols-[150px_1fr]">
+
+                <div className="relative h-full min-h-[145px] overflow-hidden">
+                  <Image
+                    src="/images/stadium3.png"
+                    alt="Stadium match night atmosphere"
+                    fill
+                    sizes="150px"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex flex-col justify-center p-5">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-champagne">
+                    01 · Match Days
                   </span>
-                </Link>
+
+                  <h3 className="mt-2 font-serif text-xl text-cream">
+                    Energy of the stadium
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-relaxed text-cream/70">
+                    Experience the atmosphere of matches and major gatherings
+                    while remaining connected to the city.
+                  </p>
+                </div>
+
               </div>
             </div>
-          </Container>
+
+            {/* CARD 02 */}
+            <div className="group overflow-hidden rounded-2xl border border-white/15 bg-black/30 shadow-2xl backdrop-blur-sm">
+
+              <div className="grid grid-cols-[150px_1fr]">
+
+                <div className="relative h-full min-h-[145px] overflow-hidden">
+                  <Image
+                    src="/images/stadium2.png"
+                    alt="Stadium concert and event atmosphere"
+                    fill
+                    sizes="150px"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex flex-col justify-center p-5">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-champagne">
+                    02 · Events
+                  </span>
+
+                  <h3 className="mt-2 font-serif text-xl text-cream">
+                    Beyond the game
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-relaxed text-cream/70">
+                    Concerts, celebrations and large-scale events extend the
+                    experience beyond match days.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
-     
-      </section>
+      </div>
+
+    </Container>
+  </div>
+</section>
       {/* =====================================================
          VALUES
       ===================================================== */}

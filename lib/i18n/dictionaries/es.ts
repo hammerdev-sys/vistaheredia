@@ -105,8 +105,12 @@ export const es: Dictionary = {
     personality: ['Conexión', 'Social', 'Auténtico', 'Orgullosamente Herediano', 'Moderno', 'Enérgico', 'Acogedor', 'Colectivo'],
     stadiumKicker: 'La conexión con el estadio',
     stadiumTitle: 'Entretejido en el juego',
-    stadiumBody:
-      'VISTAH se eleva junto al nuevo Estadio Eladio Rosabal Cordero, hogar de la energía colectiva del fútbol herediano. Las habitaciones, el Skyroom y la azotea enmarcan vistas dramáticas sobre la cancha — convirtiendo cada día de partido en una experiencia inolvidable y cada día ordinario en parte del ritmo de la ciudad.',
+    stadiumBody: [
+      'El estadio es parte de la experiencia. Su cercanía permite a huéspedes y visitantes mantener una conexión visual constante con uno de los principales puntos de encuentro de Heredia.',
+      'Desde las habitaciones, el Skyroom, Champions Corner y varias áreas comunes, es posible disfrutar de la energía de los partidos, observar el movimiento previo a cada evento y vivir el ambiente colectivo que transforma la ciudad durante cada encuentro.',
+      'VISTAH también está pensado para todas las preferencias. Las habitaciones insonorizadas ofrecen a los viajeros de negocios un santuario de tranquilidad, garantizando enfoque, productividad y descanso sin importar la actividad del estadio.',
+    ],
+    stadiumSpaces: ['Habitaciones', 'Skyroom', 'Champions Corner'],
     locationKicker: 'Ubicación',
     locationTitle: 'En el centro de todo',
     locationBody:

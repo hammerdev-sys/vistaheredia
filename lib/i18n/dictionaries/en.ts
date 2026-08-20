@@ -148,8 +148,12 @@ export const en = {
     ],
     stadiumKicker: "The stadium connection",
     stadiumTitle: "Woven into the game",
-    stadiumBody:
-      "VISTAH rises beside the new Estadio Eladio Rosabal Cordero, home to the collective energy of Heredia football. Guest rooms, the Skyroom, and the rooftop frame dramatic views over the pitch — turning every match day into an unforgettable experience and every ordinary day into part of the city\u2019s rhythm.",
+    stadiumBody: [
+      "The stadium is part of the experience. Its proximity allows guests and visitors to maintain a constant visual connection with one of Heredia’s main gathering points.",
+      "From the guest rooms, the Skyroom, Champions Corner, and various common areas, it is possible to enjoy the energy of the matches, observe the movement before each event, and experience the collective atmosphere that transforms the city during every gathering.",
+      "VISTAH is also thoughtfully designed for all preferences. Soundproof rooms provide business travelers with a quiet sanctuary, ensuring focus, productivity, and rest regardless of stadium activity.",
+    ],
+    stadiumSpaces: ["Guest Rooms", "Skyroom", "Champions Corner"],
     locationKicker: "Location",
     locationTitle: "At the center of it all",
     locationBody:
