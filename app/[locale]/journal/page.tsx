@@ -9,7 +9,7 @@ import { buildMetadata } from "@/lib/i18n/metadata"
 import { categoryLabels, getSortedPosts } from "@/lib/content/journal"
 import { PageHero } from "@/components/page-hero"
 import { Container, Kicker } from "@/components/section"
-import { JournalGrid } from "@/components/journal/journal-grid"
+import { JournalGrid } from "@/components/home/journal/journal-grid"
 import { Reveal } from "@/components/reveal"
 
 export async function generateMetadata({

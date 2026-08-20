@@ -101,70 +101,56 @@ export function SiteHeader({
   /* =========================================================
      PRIMARY NAVIGATION
   ========================================================= */
+const primaryLinks = [
+  {
+    href: `${base}/story`,
+    label: "Our Story",
+    icon: BookOpen,
+  },
+  {
+    href: `${base}/experience`,
+    label: nav.experience,
+    icon: Compass,
+  },
+  {
+    href: `${base}/spaces`,
+    label: nav.spaces,
+    icon: Sparkles,
+  },
+  {
+    href: `${base}/rooms`,
+    label: nav.rooms,
+    icon: BedDouble,
+  },
+  {
+    href: `${base}/events`,
+    label: nav.events,
+    icon: Calendar,
+  },
+]
 
-  const primaryLinks = [
-    {
-      href: `${base}/experience`,
-      label: nav.experience,
-      icon: Compass,
-    },
-
-    {
-      href: `${base}/spaces`,
-      label: nav.spaces,
-      icon: Sparkles,
-    },
-
-    {
-      href: `${base}/rooms`,
-      label: nav.rooms,
-      icon: BedDouble,
-    },
-
-    {
-      href: `${base}/food-beverage`,
-      label: "Food & Beverage",
-      icon: UtensilsCrossed,
-    },
-
-    {
-      href: `${base}/events`,
-      label: nav.events,
-      icon: Calendar,
-    },
-  ]
-
-
-  /* =========================================================
-     MORE DROPDOWN
-  ========================================================= */
-
-  const moreLinks = [
-    {
-      href: `${base}/story`,
-      label: nav.story,
-      icon: BookOpen,
-    },
-
-    {
-      href: `${base}/construction`,
-      label: nav.construction,
-      icon: Building2,
-    },
-
-    {
-      href: `${base}/journal`,
-      label: nav.journal,
-      icon: FileText,
-    },
-
-    {
-      href: `${base}/contact`,
-      label: nav.contact,
-      icon: Mail,
-    },
-  ]
-
+const moreLinks = [
+  {
+    href: `${base}/food-beverage`,
+    label: "Food & Beverage",
+    icon: UtensilsCrossed,
+  },
+  {
+    href: `${base}/construction`,
+    label: nav.construction,
+    icon: Building2,
+  },
+  {
+    href: `${base}/journal`,
+    label: nav.journal,
+    icon: FileText,
+  },
+  {
+    href: `${base}/contact`,
+    label: nav.contact,
+    icon: Mail,
+  },
+]
 
   /* =========================================================
      MOBILE LINKS
