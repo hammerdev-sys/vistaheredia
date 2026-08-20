@@ -368,6 +368,21 @@ export const es: Dictionary = {
     title: 'Tu puerta de entrada a la auténtica Heredia',
     intro:
       'VISTAH es más que un lugar para hospedarse — es la puerta de entrada a la Ciudad de las Flores. Fútbol, café, cultura, gastronomía y naturaleza silvestre comienzan en nuestra puerta.',
+    exteriorKicker: 'Diseño del Hotel',
+    exteriorTitle: 'Un referente moldeado por la luz y la geometría',
+    exteriorViews: [
+      { image: '/images/Lateral2.png', alt: 'Exterior de VISTAH, vista izquierda', label: 'Vista Izquierda' },
+      { image: '/images/Principal3.png', alt: 'Exterior de VISTAH, vista frontal', label: 'Vista Frontal' },
+      { image: '/images/Lateral1.png', alt: 'Exterior de VISTAH, vista derecha', label: 'Vista Derecha' },
+      { image: '/images/Lateral3.jpg', alt: 'Exterior de VISTAH de noche', label: 'Vista Nocturna' },
+    ],
+    overviewKicker: 'Resumen',
+    overviewBody: [
+      'VISTAH es un destino contemporáneo donde convergen la hospitalidad, la comunidad y la vida urbana. Ubicado estratégicamente en Heredia, el hotel ofrece una experiencia que va más allá del hospedaje tradicional, convirtiéndose en un punto de encuentro para visitantes, residentes y viajeros que buscan conectar con la ciudad y la provincia a través de la gastronomía, el entretenimiento y experiencias compartidas.',
+      'Su cercanía inmediata al estadio amplía las posibilidades de entretenimiento, permitiendo a los huéspedes vivir la energía de los partidos, espectáculos y eventos culturales desde una ubicación privilegiada.',
+    ],
+    overviewSpacesIntro:
+      'El hotel se articula a través de una serie de espacios diseñados para acompañar los distintos momentos del día.',
     ctaTitle: 'Hospédate en el centro de todo',
     ctaBody:
       'Haz de VISTAH tu base para explorar Heredia — desde el día de partido en el estadio hasta una mañana en los cafetales.',

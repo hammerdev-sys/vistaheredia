@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Image from "next/image"
+import Link from "next/link"
 import { isLocale, type Locale } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { buildMetadata } from "@/lib/i18n/metadata"
@@ -67,12 +68,204 @@ export default async function ExperiencePage({
       {/* =========================
           OVERVIEW HIGHLIGHTS
       ========================= */}
-      <section className="relative border-b border-border/40 bg-background pb-4 pt-16">
+<section className="relative overflow-hidden border-b border-border/40 bg-background py-20 md:py-28">
+  {/* Soft background glow */}
+  <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-primary/5 blur-[160px]" />
 
-        <div className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[800px] -translate-x-1/2 rounded-full bg-primary/5 blur-[160px]" />
+  <Container className="relative z-10">
 
-        
-      </section>
+    {/* =========================================================
+        HOTEL DESIGN
+    ========================================================= */}
+    <Reveal>
+      <div className="mx-auto max-w-3xl text-center">
+        <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+          {t.exteriorKicker}
+        </span>
+
+        <h2 className="mt-5 text-balance font-serif text-3xl leading-tight tracking-tight text-foreground md:text-5xl">
+          {t.exteriorTitle}
+        </h2>
+      </div>
+    </Reveal>
+
+
+    {/* =========================================================
+        EXTERIOR IMAGES
+    ========================================================= */}
+    <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+      {t.exteriorViews.slice(0, 3).map((view, i) => (
+        <Reveal key={view.image} delay={i * 100}>
+          <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted shadow-sm">
+            <Image
+              src={view.image}
+              alt={view.alt}
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+            />
+
+            {/* Image overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-transparent" />
+
+            {/* View label */}
+            <div className="absolute bottom-5 left-5">
+              <span className="rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md">
+                {view.label}
+              </span>
+            </div>
+          </div>
+        </Reveal>
+      ))}
+    </div>
+
+
+    {/* =========================================================
+        NIGHT VIEW - FEATURE IMAGE
+    ========================================================= */}
+    {t.exteriorViews[3] && (
+      <Reveal delay={200}>
+        <div className="mt-5">
+          <div className="group relative aspect-[21/8] overflow-hidden rounded-2xl bg-muted">
+            <Image
+              src={t.exteriorViews[3].image}
+              alt={t.exteriorViews[3].alt}
+              fill
+              sizes="100vw"
+              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+            <div className="absolute bottom-5 left-5">
+              <span className="rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md">
+                {t.exteriorViews[3].label}
+              </span>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    )}
+
+
+    {/* =========================================================
+        OVERVIEW
+    ========================================================= */}
+    <Reveal delay={100}>
+      <div className="mx-auto mt-24 max-w-4xl text-center md:mt-32">
+
+        <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+          {t.overviewKicker}
+        </span>
+
+        <div className="mt-8 space-y-6">
+          {t.overviewBody.map((paragraph, i) => (
+            <p
+              key={i}
+              className="text-pretty font-light leading-relaxed text-muted-foreground md:text-lg"
+            >
+              {paragraph}
+            </p>
+          ))}
+        </div>
+
+      </div>
+    </Reveal>
+
+
+    {/* =========================================================
+        SPACES INTRO
+    ========================================================= */}
+    <Reveal delay={150}>
+      <div className="mx-auto mt-24 max-w-3xl text-center md:mt-32">
+
+        <div className="mx-auto mb-6 h-px w-20 bg-primary/40" />
+
+        <p className="text-balance font-serif text-2xl leading-relaxed tracking-tight text-foreground md:text-3xl">
+          {t.overviewSpacesIntro}
+        </p>
+
+      </div>
+    </Reveal>
+
+
+    {/* =========================================================
+        SPACES
+    ========================================================= */}
+    <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {dict.spaces.items.map((space, i) => (
+        <Reveal key={space.id} delay={i * 70}>
+          <Link
+            href={`/${l}/spaces#${space.id}`}
+            className="group relative flex h-full min-h-[230px] flex-col justify-between overflow-hidden rounded-2xl border border-border/50 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl"
+          >
+
+            {/* Number */}
+            <div className="flex items-center justify-between">
+              <span className="font-serif text-2xl text-primary/40 transition-colors group-hover:text-primary">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border text-sm text-muted-foreground transition-all group-hover:border-primary group-hover:text-primary">
+                →
+              </span>
+            </div>
+
+            {/* Content */}
+            <div className="mt-10">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-foreground transition-colors group-hover:text-primary">
+                {space.name}
+              </h3>
+
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                {space.body}
+              </p>
+            </div>
+
+            {/* Bottom line */}
+            <div className="mt-6 h-px w-0 bg-primary transition-all duration-500 group-hover:w-full" />
+
+          </Link>
+        </Reveal>
+      ))}
+    </div>
+
+
+    {/* =========================================================
+        CTA
+    ========================================================= */}
+    <Reveal delay={100}>
+      <div className="relative mt-24 overflow-hidden rounded-3xl bg-charcoal px-6 py-16 text-center text-cream md:mt-32 md:px-12 md:py-24">
+
+        {/* Decorative glow */}
+        <div className="pointer-events-none absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-champagne/10 blur-3xl" />
+
+        <div className="relative z-10 mx-auto max-w-2xl">
+
+          <h2 className="text-balance font-serif text-3xl leading-tight md:text-5xl">
+            {t.ctaTitle}
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-xl text-pretty text-base leading-relaxed text-cream/75 md:text-lg">
+            {t.ctaBody}
+          </p>
+
+          <div className="mt-8">
+            <CTALink
+              href={`/${l}/pre-booking`}
+              variant="light"
+              size="lg"
+            >
+              {t.ctaButton}
+            </CTALink>
+          </div>
+
+        </div>
+      </div>
+    </Reveal>
+
+  </Container>
+</section>
 
       {/* =========================
           EXPERIENCE HIGHLIGHTS

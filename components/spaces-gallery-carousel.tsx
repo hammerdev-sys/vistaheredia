@@ -133,14 +133,15 @@ export function SpacesGalleryCarousel({
               justify-center
               rounded-full
               border
-              border-black/10
-              bg-white
-              text-black
+              border-white/10
+              bg-charcoal/50
+              text-cream
               shadow-xl
+              backdrop-blur-sm
               transition-all
               duration-300
               hover:scale-105
-              hover:bg-white
+              hover:bg-charcoal/70
               active:scale-95
               md:left-4
             "
@@ -169,14 +170,15 @@ export function SpacesGalleryCarousel({
               justify-center
               rounded-full
               border
-              border-black/10
-              bg-white
-              text-black
+              border-white/10
+              bg-charcoal/50
+              text-cream
               shadow-xl
+              backdrop-blur-sm
               transition-all
               duration-300
               hover:scale-105
-              hover:bg-white
+              hover:bg-charcoal/70
               active:scale-95
               md:right-4
             "

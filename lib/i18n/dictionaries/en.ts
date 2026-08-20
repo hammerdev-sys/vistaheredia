@@ -457,15 +457,76 @@ export const en = {
     ctaBody:
       "Confirmed booking opens closer to our Q4 2027 opening. Pre-book room blocks and groups with our team now.",
   },
-  experience: {
-    kicker: "The Heredia Experience",
-    title: "Your gateway to authentic Heredia",
-    intro:
-      "VISTAH is more than a place to stay — it is the doorway to the City of Flowers. Football, coffee, culture, gastronomy, and wild nature all begin at our doorstep.",
-    ctaTitle: "Stay at the heart of it all",
-    ctaBody:
-      "Make VISTAH your base for exploring Heredia — from match day at the stadium to a morning in the cafetales.",
-    ctaButton: "Pre-Book your stay",
+ experience: {
+  kicker: "The Heredia Experience",
+
+  title: "Your gateway to authentic Heredia",
+
+  intro:
+    "VISTAH is more than a place to stay — it is the doorway to the City of Flowers. Football, coffee, culture, gastronomy, and wild nature all begin at our doorstep.",
+
+  exteriorKicker: "Hotel Design",
+
+  exteriorTitle: "A landmark shaped by light and geometry",
+
+  exteriorViews: [
+    {
+      image: "/images/Lateral2.png",
+      alt: "VISTAH exterior, left view",
+      label: "Left View",
+    },
+    {
+      image: "/images/Principal3.png",
+      alt: "VISTAH exterior, front view",
+      label: "Front View",
+    },
+    {
+      image: "/images/Lateral1.png",
+      alt: "VISTAH exterior, right view",
+      label: "Right View",
+    },
+    {
+      image: "/images/Lateral3.jpg",
+      alt: "VISTAH exterior at night",
+      label: "Night View",
+    },
+  ],
+
+  overviewKicker: "Overview",
+
+  overviewBody: [
+    "VISTAH is a contemporary destination where hospitality, community, and urban life converge. Strategically located within Heredia, the hotel offers an experience that goes beyond traditional lodging, becoming a meeting point for visitors, residents, and travelers seeking to connect with the city and province through gastronomy, entertainment, and shared experiences.",
+
+    "Its immediate proximity to the stadium expands the possibilities for entertainment, allowing guests to experience the energy of matches, shows, and cultural events from a privileged location.",
+  ],
+
+  overviewSpacesIntro:
+    "The hotel is articulated through a series of spaces designed to accompany different moments of the day.",
+
+  ctaTitle: "Stay at the heart of it all",
+
+  ctaBody:
+    "Make VISTAH your base for exploring Heredia — from match day at the stadium to a morning in the cafetales.",
+
+  ctaButton: "Pre-Book your stay",
+},
+  foodBeverage: {
+    heroKicker: "VISTAH Heredia",
+    heroTitle: "Food &\nBeverage",
+    heroIntro:
+      "A curated collection of culinary destinations shaped around atmosphere, gathering, hospitality, and the vibrant energy of the city.",
+    galleryKicker: "Culinary Collection",
+    galleryTitle: "Food & Beverage",
+    bottomKicker: "VISTAH Heredia",
+    bottomTitle: "Where the City\nGathers",
+    dishes: [
+      { id: "risotto", name: "Risotto" },
+      { id: "rodizzio-de-lomo", name: "Rodizzio de Lomo" },
+      { id: "salmon", name: "Salmon" },
+      { id: "tataki-de-atun", name: "Tataki de Atún" },
+      { id: "tiradito-sansei", name: "Tiradito Sansei" },
+      { id: "vaso-crema-de-lucuma", name: "Lúcuma Cream Glass" },
+    ],
   },
   journal: {
     kicker: "Journal",
