@@ -196,9 +196,9 @@ const moreLinks = [
         =================================================== */}
 
         <Link
-          href={base}
+          href={`${base}/story`}
           className="flex shrink-0 items-center"
-          aria-label="VISTAH Home"
+          aria-label="VISTAH Our Story"
         >
           <img
             src="/images/logo.png"

@@ -117,6 +117,52 @@ export const es: Dictionary = {
       { label: 'Centro de San José', value: '~25 minutos' },
       { label: 'Centro de Heredia', value: 'A poca distancia a pie' },
     ],
+    mapsKicker: 'Región',
+    mapsTitle: 'Dónde se ubica VISTAH, cerca y lejos',
+    mapsRegionLabel: 'Región',
+    mapsAreaLabel: 'Zona de Heredia',
+    hotelViewsKicker: 'Vistas del Hotel',
+    hotelViewsTitle: 'La vista desde cada habitación',
+    hotelViewsBody:
+      'Desde el amanecer sobre las montañas hasta el día de partido bajo las luces, VISTAH enmarca Heredia desde cada ángulo.',
+    hotelViews: [
+      {
+        image: '/images/what-vistah.png',
+        alt: 'Vista desde VISTAH hacia San José y las montañas de Escazú',
+        badge: 'Vista del Hotel',
+        caption: 'Hacia San José y las Montañas de Escazú',
+      },
+      {
+        image: '/images/stadium-connection.png',
+        alt: 'Vista desde una habitación de VISTAH hacia el estadio',
+        badge: 'Vista del Hotel',
+        caption: 'Hacia el Estadio',
+      },
+      {
+        image: '/images/view3.jpeg',
+        alt: 'Horizonte de Heredia hacia el oeste durante la hora dorada',
+        badge: 'Vista del Hotel',
+        caption: 'Hacia el Oeste',
+      },
+      {
+        image: '/images/stadium4.png',
+        alt: 'Estadio iluminado en noche de partido, vista desde VISTAH',
+        badge: 'Vista del Hotel',
+        caption: 'Noche de Partido',
+      },
+      {
+        image: '/images/stadium3.png',
+        alt: 'Ambiente y entretenimiento del estadio, vista desde VISTAH',
+        badge: 'Vista del Hotel',
+        caption: 'Entretenimiento',
+      },
+      {
+        image: '/images/stadium2.png',
+        alt: 'Actividad y energía de la afición, vista desde VISTAH',
+        badge: 'Vista del Hotel',
+        caption: 'Actividad',
+      },
+    ],
   },
   spaces: {
     kicker: 'Espacios y Amenidades',

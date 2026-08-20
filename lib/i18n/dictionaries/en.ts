@@ -160,6 +160,52 @@ export const en = {
       { label: "Downtown San José", value: "~25 minutes" },
       { label: "Central Heredia", value: "Walking distance" },
     ],
+    mapsKicker: "Region",
+    mapsTitle: "Where VISTAH sits, near and far",
+    mapsRegionLabel: "Region",
+    mapsAreaLabel: "Heredia Area",
+    hotelViewsKicker: "Hotel Views",
+    hotelViewsTitle: "The view from every room",
+    hotelViewsBody:
+      "From sunrise over the mountains to matchday under the lights, VISTAH frames Heredia from every angle.",
+    hotelViews: [
+      {
+        image: "/images/what-vistah.png",
+        alt: "View from VISTAH toward San José and the Escazú mountains",
+        badge: "Hotel View",
+        caption: "To San José & Escazú Mountains",
+      },
+      {
+        image: "/images/stadium-connection.png",
+        alt: "View from a VISTAH guest room toward the stadium",
+        badge: "Hotel View",
+        caption: "To the Stadium",
+      },
+      {
+        image: "/images/view3.jpeg",
+        alt: "Heredia skyline facing west at golden hour",
+        badge: "Hotel View",
+        caption: "Facing West",
+      },
+      {
+        image: "/images/stadium4.png",
+        alt: "Stadium lit up on match night, view from VISTAH",
+        badge: "Hotel View",
+        caption: "Match Day Lights",
+      },
+      {
+        image: "/images/stadium3.png",
+        alt: "Stadium atmosphere and entertainment, view from VISTAH",
+        badge: "Hotel View",
+        caption: "Entertainment",
+      },
+      {
+        image: "/images/stadium2.png",
+        alt: "Stadium activity and crowd energy, view from VISTAH",
+        badge: "Hotel View",
+        caption: "Activity",
+      },
+    ],
   },
   spaces: {
     kicker: "Spaces & Amenities",
