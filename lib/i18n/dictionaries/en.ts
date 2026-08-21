@@ -528,6 +528,28 @@ export const en = {
       { id: "tiradito-sansei", name: "Tiradito Sansei" },
       { id: "vaso-crema-de-lucuma", name: "Lúcuma Cream Glass" },
     ],
+    venues: [
+      {
+        id: "skyroom",
+        description:
+          "The Skyroom is envisioned as an elevated gastronomic experience where atmosphere, city views, and sensory experiences come together within a contemporary setting. Throughout the day, the space evolves from a more relaxed and tranquil atmosphere into a dynamic, social, and immersive environment, establishing itself as one of the hotel's main gathering points. The culinary offering focuses on contemporary cuisine with refined presentation and a gastronomic experience aligned with the visual and spatial character of the rooftop.",
+      },
+      {
+        id: "coffee",
+        description:
+          "The Coffee Shop is envisioned as a calm and welcoming space designed to accompany everyday life, casual encounters, and moments of pause. The concept revolves around specialty coffee culture and a light, contemporary gastronomic offering, creating an accessible setting where guests can enjoy fresh coffee, simple food, and a relaxed atmosphere throughout the day.",
+      },
+      {
+        id: "champions",
+        description:
+          "Champions Corner is a contemporary social bar inspired by collective energy, gathering, and celebration. With views toward the stadium, the space becomes an active social hub within the hotel, where the atmosphere evolves between day and night. Its gastronomic offering combines reinterpreted comfort food, Tex-Mex influences, cocktails, and shared experiences within a dynamic, vibrant, and social environment.",
+      },
+      {
+        id: "ballroom",
+        description:
+          "The Ballroom's gastronomic experience is developed through flexibility, elegance, and collective celebration. Designed to host corporate events, social gatherings, and formal dinners, the space balances a sophisticated atmosphere with a welcoming feeling. The culinary proposal focuses on carefully curated gastronomic experiences, adapting to different formats and event types.",
+      },
+    ],
   },
   journal: {
     kicker: "Journal",

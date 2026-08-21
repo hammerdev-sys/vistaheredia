@@ -406,6 +406,28 @@ export const es: Dictionary = {
       { id: 'tiradito-sansei', name: 'Tiradito Sansei' },
       { id: 'vaso-crema-de-lucuma', name: 'Vaso de Crema de Lúcuma' },
     ],
+    venues: [
+      {
+        id: 'skyroom',
+        description:
+          'El Skyroom está concebido como una experiencia gastronómica elevada donde la atmósfera, las vistas de la ciudad y las experiencias sensoriales se combinan en un entorno contemporáneo. A lo largo del día, el espacio evoluciona desde un ambiente más relajado y tranquilo hacia un entorno dinámico, social e inmersivo, consolidándose como uno de los principales puntos de encuentro del hotel. La oferta culinaria se enfoca en cocina contemporánea con presentación refinada y una experiencia gastronómica alineada con el carácter visual y espacial de la azotea.',
+      },
+      {
+        id: 'coffee',
+        description:
+          'El Coffee Shop está concebido como un espacio cálido y acogedor diseñado para acompañar la vida cotidiana, los encuentros casuales y las pausas del día. El concepto gira en torno a la cultura del café de especialidad y una oferta gastronómica ligera y contemporánea, creando un ambiente accesible donde los huéspedes pueden disfrutar de café fresco, comida sencilla y un ambiente relajado durante todo el día.',
+      },
+      {
+        id: 'champions',
+        description:
+          'Champions Corner es un bar social contemporáneo inspirado en la energía colectiva, el encuentro y la celebración. Con vistas hacia el estadio, el espacio se convierte en un punto social activo dentro del hotel, donde el ambiente evoluciona entre el día y la noche. Su oferta gastronómica combina comida reconfortante reinterpretada, influencias Tex-Mex, cócteles y experiencias compartidas dentro de un entorno dinámico, vibrante y social.',
+      },
+      {
+        id: 'ballroom',
+        description:
+          'La experiencia gastronómica del Ballroom se desarrolla a través de la flexibilidad, la elegancia y la celebración colectiva. Diseñado para albergar eventos corporativos, reuniones sociales y cenas formales, el espacio equilibra una atmósfera sofisticada con una sensación acogedora. La propuesta culinaria se centra en experiencias gastronómicas cuidadosamente seleccionadas, adaptándose a diferentes formatos y tipos de eventos.',
+      },
+    ],
   },
   journal: {
     kicker: 'Journal',

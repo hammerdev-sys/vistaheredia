@@ -11,7 +11,6 @@ type VenueImage = {
 type VenueSection = {
   id: string;
   title: string;
-  description?: string;
   mainImage: VenueImage;
   images: VenueImage[];
 };
@@ -20,8 +19,6 @@ const venueSections: VenueSection[] = [
   {
     id: "skyroom",
     title: "SKYROOM",
-    description:
-      "The Skyroom is envisioned as an elevated gastronomic experience where atmosphere, city views, and sensory experiences come together within a contemporary setting. Throughout the day, the space evolves from a more relaxed and tranquil atmosphere into a dynamic, social, and immersive environment, establishing itself as one of the hotel’s main gathering points. The culinary offering focuses on contemporary cuisine with refined presentation and a gastronomic experience aligned with the visual and spatial character of the rooftop.",
 
     mainImage: {
       src: "/images/food/skyroom-main.png",
@@ -59,8 +56,6 @@ const venueSections: VenueSection[] = [
   {
     id: "coffee",
     title: "COFFEE SHOP",
-    description:
-           "The Coffee Shop is envisioned as a calm and welcoming space designed to accompany everyday life, casual encounters, and moments of pause. The concept revolves around specialty coffee culture and a light, contemporary gastronomic offering, creating an accessible setting where guests can enjoy fresh coffee, simple food, and a relaxed atmosphere throughout the day.",
 
     mainImage: {
       src: "/images/food/coffee.png",
@@ -98,8 +93,6 @@ const venueSections: VenueSection[] = [
   {
     id: "champions",
     title: "CHAMPIONS CORNER",
-    description:"Champions Corner is a contemporary social bar inspired by collective energy, gathering, and celebration. With views toward the stadium, the space becomes an active social hub within the hotel, where the atmosphere evolves between day and night. Its gastronomic offering combines reinterpreted comfort food, Tex-Mex influences, cocktails, and shared experiences within a dynamic, vibrant, and social environment.",
-
 
     mainImage: {
       src: "/images/food/champion-main.png",
@@ -137,8 +130,6 @@ const venueSections: VenueSection[] = [
   {
     id: "ballroom",
     title: "BALLROOM",
-    description:
-      "The Ballroom’s gastronomic experience is developed through flexibility, elegance, and collective celebration. Designed to host corporate events, social gatherings, and formal dinners, the space balances a sophisticated atmosphere with a welcoming feeling. The culinary proposal focuses on carefully curated gastronomic experiences, adapting to different formats and event types.",
 
     mainImage: {
       src: "/images/food/ballroom-main.png",
@@ -234,7 +225,10 @@ export default async function FoodBeveragePage({
           VENUE SECTIONS
       ========================================================= */}
       <section className="bg-[#f4f1eb]">
-        {venueSections.map((venue, venueIndex) => (
+        {venueSections.map((venue, venueIndex) => {
+          const venueText = t.venues.find((v) => v.id === venue.id);
+
+          return (
           <section
             key={venue.id}
             id={venue.id}
@@ -261,9 +255,7 @@ export default async function FoodBeveragePage({
                 {/* RIGHT - VENUE CONTENT */}
                 <div className="max-w-xl">
 
-                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-black/50">
-                    VISTAH
-                  </p>
+                 
 
                   <h2 className="text-4xl font-light tracking-[0.12em] md:text-5xl lg:text-6xl">
                     {venue.title}
@@ -271,9 +263,9 @@ export default async function FoodBeveragePage({
 
                   <div className="my-7 h-px w-16 bg-black/30" />
 
-                  {venue.description && (
+                  {venueText?.description && (
                     <p className="max-w-md text-sm leading-7 text-black/60 md:text-base">
-                      {venue.description}
+                      {venueText.description}
                     </p>
                   )}
                 </div>
@@ -327,7 +319,8 @@ export default async function FoodBeveragePage({
               </div>
             </div>
           </section>
-        ))}
+          );
+        })}
       </section>
 
       {/* =========================================================
