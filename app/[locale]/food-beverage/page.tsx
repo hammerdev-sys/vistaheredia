@@ -1,46 +1,29 @@
 import Image from "next/image"
+import { notFound } from "next/navigation"
+import { isLocale, type Locale } from "@/lib/i18n/config"
+import { getDictionary } from "@/lib/i18n/dictionaries"
 
-type FoodImage = {
-  id: string
-  name: string
-  image: string
-  span?: string
+const dishImages: Record<string, string> = {
+  risotto: "/images/Risotto%20C.jpg",
+  "rodizzio-de-lomo": "/images/RODIZZIO%20DE%20LOMO.jpg",
+  salmon: "/images/SALMON.jpg",
+  "tataki-de-atun": "/images/tataki%20de%20atun.JPG",
+  "tiradito-sansei": "/images/tiradito%20sansei.JPG",
+  "vaso-crema-de-lucuma": "/images/vaso%20crema%20de%20lúcuma.jpg",
 }
 
-const foodImages: FoodImage[] = [
-  {
-    id: "risotto",
-    name: "RISOTTO",
-    image: "/images/Risotto C.jpg",
-  },
-  {
-    id: "rodizzio-de-lomo",
-    name: "RODIZZIO DE LOMO",
-    image: "/images/RODIZZIO DE LOMO.jpg",
-  },
-  {
-    id: "salmon",
-    name: "SALMON",
-    image: "/images/SALMON.jpg",
-  },
-  {
-    id: "tataki-de-atun",
-    name: "TATAKI DE ATÚN",
-    image: "/images/tataki de atun.JPG",
-  },
-  {
-    id: "tiradito-sansei",
-    name: "TIRADITO SANSEI",
-    image: "/images/tiradito sansei.JPG",
-  },
-  {
-    id: "vaso-crema-de-lucuma",
-    name: "VASO CREMA DE LÚCUMA",
-    image: "/images/vaso crema de lúcuma.jpg",
-  },
-]
+export default async function FoodBeveragePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
 
-export default function FoodBeveragePage() {
+  if (!isLocale(locale)) notFound()
+
+  const dict = getDictionary(locale as Locale)
+  const t = dict.foodBeverage
+
   return (
     <main className="min-h-screen bg-[#f4f1eb] text-[#191919]">
 
@@ -59,21 +42,22 @@ export default function FoodBeveragePage() {
 
   <div className="relative z-10 px-6 text-center text-white">
     <p className="mb-6 text-xs uppercase tracking-[0.4em]">
-      VISTAH HEREDIA
+      {t.heroKicker}
     </p>
 
           <h1 className="text-5xl font-light tracking-[0.15em] md:text-7xl">
-            FOOD &amp;
-            <br />
-            BEVERAGE
+            {t.heroTitle.split("\n").map((line, i) => (
+              <span key={i}>
+                {i > 0 && <br />}
+                {line}
+              </span>
+            ))}
           </h1>
 
           <div className="mx-auto mt-8 h-px w-16 bg-white/60" />
 
           <p className="mx-auto mt-8 max-w-xl text-sm leading-relaxed text-white/80 md:text-base">
-            A curated collection of culinary destinations shaped around
-            atmosphere, gathering, hospitality, and the vibrant energy of
-            the city.
+            {t.heroIntro}
           </p>
         </div>
       </section>
@@ -84,27 +68,27 @@ export default function FoodBeveragePage() {
         {/* Heading */}
         <div className="mb-14 text-center">
           <p className="mb-4 text-xs uppercase tracking-[0.35em] text-black/50">
-            Culinary Collection
+            {t.galleryKicker}
           </p>
 
           <h2 className="text-3xl font-light tracking-[0.08em] md:text-5xl">
-            FOOD &amp; BEVERAGE
+            {t.galleryTitle}
           </h2>
         </div>
 
         {/* GRID */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-          {foodImages.map((item, index) => (
+          {t.dishes.map((dish, index) => (
             <article
-              key={item.id}
+              key={dish.id}
               className="group overflow-hidden bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               {/* IMAGE */}
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-100">
                 <Image
-                  src={item.image}
-                  alt={item.name}
+                  src={dishImages[dish.id] || "/placeholder.svg"}
+                  alt={dish.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -118,7 +102,7 @@ export default function FoodBeveragePage() {
                 </div>
 
                 <h3 className="text-sm font-medium uppercase tracking-[0.15em] text-[#191919]">
-                  {item.name}
+                  {dish.name}
                 </h3>
               </div>
             </article>
@@ -131,13 +115,16 @@ export default function FoodBeveragePage() {
       <section className="border-t border-black/10 bg-[#e9e4da] px-6 py-24 text-center">
 
         <p className="mb-4 text-xs uppercase tracking-[0.35em] text-black/50">
-          VISTAH HEREDIA
+          {t.bottomKicker}
         </p>
 
         <h2 className="text-4xl font-light tracking-[0.1em] md:text-6xl">
-          WHERE THE CITY
-          <br />
-          <span className="font-normal">GATHERS</span>
+          {t.bottomTitle.split("\n").map((line, i) => (
+            <span key={i} className={i > 0 ? "font-normal" : undefined}>
+              {i > 0 && <br />}
+              {line}
+            </span>
+          ))}
         </h2>
 
       </section>

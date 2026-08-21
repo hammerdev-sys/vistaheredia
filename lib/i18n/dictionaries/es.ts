@@ -388,6 +388,24 @@ export const es: Dictionary = {
       'Haz de VISTAH tu base para explorar Heredia — desde el día de partido en el estadio hasta una mañana en los cafetales.',
     ctaButton: 'Pre-Reserva tu estadía',
   },
+  foodBeverage: {
+    heroKicker: 'VISTAH Heredia',
+    heroTitle: 'Comida y\nBebida',
+    heroIntro:
+      'Una colección curada de destinos culinarios moldeados por la atmósfera, el encuentro, la hospitalidad y la energía vibrante de la ciudad.',
+    galleryKicker: 'Colección Culinaria',
+    galleryTitle: 'Comida y Bebida',
+    bottomKicker: 'VISTAH Heredia',
+    bottomTitle: 'Donde la Ciudad\nSe Reúne',
+    dishes: [
+      { id: 'risotto', name: 'Risotto' },
+      { id: 'rodizzio-de-lomo', name: 'Rodizzio de Lomo' },
+      { id: 'salmon', name: 'Salmón' },
+      { id: 'tataki-de-atun', name: 'Tataki de Atún' },
+      { id: 'tiradito-sansei', name: 'Tiradito Sansei' },
+      { id: 'vaso-crema-de-lucuma', name: 'Vaso de Crema de Lúcuma' },
+    ],
+  },
   journal: {
     kicker: 'Journal',
     title: 'Historias desde VISTAH',
