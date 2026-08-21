@@ -79,6 +79,7 @@ export const es: Dictionary = {
     ctaCareersButton: 'Ver vacantes',
   },
   story: {
+    whatIsVistah: '¿Qué es VISTAH?',
     kicker: 'Nuestra Historia',
     title: 'El significado de VISTAH',
    intro:

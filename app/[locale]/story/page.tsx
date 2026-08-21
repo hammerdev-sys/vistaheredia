@@ -72,7 +72,7 @@ export default async function StoryPage({
           <div className="absolute inset-0 flex items-start justify-center px-6 pt-24 md:pt-32 lg:pt-40">
             <div className="w-full max-w-5xl border border-white/90 px-8 py-10 md:px-16 md:py-12 lg:px-20 lg:py-14 bg-black/20 backdrop-blur-xs">
               <h2 className="text-center font-sans text-4xl font-bold uppercase tracking-[0.08em] text-white md:text-5xl lg:text-6xl">
-                What is VISTAH?
+                {t.whatIsVistah}
               </h2>
             </div>
           </div>

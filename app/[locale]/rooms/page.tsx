@@ -112,7 +112,11 @@ export default async function RoomsPage({
                     </div>
 
                     <div className="mt-8">
-                      <CTALink href={`/${l}/pre-booking`} variant="outline">
+                      <CTALink
+                        href={`/${l}/pre-booking`}
+                        variant="outline"
+                        className="bg-primary text-primary-foreground hover:bg-primary/90"
+                      >
                         {t.enquire}
                       </CTALink>
                     </div>
