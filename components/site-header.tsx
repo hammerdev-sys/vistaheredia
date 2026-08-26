@@ -530,6 +530,7 @@ const moreLinks = [
             border-t
             border-border/60
             bg-background/95
+            whitespace-nowrap
             backdrop-blur-2xl
             lg:hidden
             animate-in
