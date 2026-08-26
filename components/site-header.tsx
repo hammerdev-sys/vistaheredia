@@ -235,6 +235,7 @@ const moreLinks = [
                 href={link.href}
                 className={cn(
                   `
+                    whitespace-nowrap
                     text-sm
                     font-medium
                     tracking-wide
@@ -275,6 +276,7 @@ const moreLinks = [
                   inline-flex
                   items-center
                   gap-1.5
+                  whitespace-nowrap
                   text-sm
                   font-medium
                   tracking-wide
