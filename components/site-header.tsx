@@ -562,6 +562,7 @@ const moreLinks = [
                 py-3
                 text-base
                 font-medium
+                whitespace-nowrap
                 text-foreground/90
                 transition-colors
                 hover:bg-secondary
@@ -594,6 +595,7 @@ const moreLinks = [
                       gap-3
                       rounded-xl
                       px-3
+                      whitespace-nowrap
                       py-3
                       text-base
                       font-medium
