@@ -150,7 +150,7 @@ const venueSections: VenueSection[] = [
         alt: "Churros",
       },
       {
-        src: "/images/food/ceviche.jpg",
+        src: "/images/food/Ceviche.jpg",
         alt: "Ceviche",
       },
       {
