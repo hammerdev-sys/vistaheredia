@@ -515,6 +515,39 @@ destinationBody1:
 destinationBody2:
   "VISTAH proposes an experience integrated with Heredia, contributing to a more connected, active, and participatory city where hospitality, culture, business, and everyday life converge in one place.",
 
+    brandPillarsTitle: "Brand Pillars",
+    brandPillarsIntro:
+      "Three pillars shape the VISTAH experience — connection, energy, and culture, rooted in Heredia and designed for today's travelers and locals.",
+    brandPillars: [
+      {
+        number: "01",
+        title: "Gathering Point",
+        subtitle: "A platform for connection.",
+        body: [
+          "VISTAH is conceived as a living social infrastructure — not only a hotel, but a place where people gather, interact, and naturally share time together.",
+          "The spaces are designed to dissolve barriers between guest, visitor, and local community.",
+        ],
+      },
+      {
+        number: "02",
+        title: "Collective Energy",
+        subtitle: "An energy that evolves and is shared.",
+        body: [
+          "The hotel moves to the rhythm of the city. From calm mornings connected to the surroundings, to active afternoons and vibrant nights, the hotel transforms throughout the day.",
+          "Inspired by the collective energy of football and social life, this rhythm becomes a shared experience — where atmosphere, emotion, and activity build a continuous sense of connection and celebration.",
+        ],
+      },
+      {
+        number: "03",
+        title: "Cultural Immersion",
+        subtitle: "A contemporary expression of local identity.",
+        body: [
+          "The hotel translates Heredia's culture — coffee, football, business, and everyday life — into spatial, sensory, and experiential elements.",
+          "It is not thematic; it is deeply rooted in its context.",
+        ],
+      },
+    ],
+
     ctaTitle: "Stay at the heart of it all",
 
     ctaBody:

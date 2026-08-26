@@ -503,6 +503,38 @@ export const es: Dictionary = {
       "El hotel fortalece la relación entre los visitantes y la comunidad local a través de experiencias compartidas, espacios de encuentro y programación activa que fomenta la interacción, la permanencia y el intercambio.",
     destinationBody2:
       "VISTAH propone una experiencia integrada con Heredia, contribuyendo a una ciudad más conectada, activa y participativa donde la hospitalidad, la cultura, los negocios y la vida cotidiana convergen en un mismo lugar.",
+    brandPillarsTitle: "Pilares de Marca",
+    brandPillarsIntro:
+      "Tres pilares dan forma a la experiencia VISTAH — conexión, energía y cultura, arraigados en Heredia y diseñados para los viajeros y locales de hoy.",
+    brandPillars: [
+      {
+        number: "01",
+        title: "Punto de Encuentro",
+        subtitle: "Una plataforma para la conexión.",
+        body: [
+          "VISTAH está concebido como una infraestructura social viva — no solo un hotel, sino un lugar donde las personas se reúnen, interactúan y comparten tiempo de forma natural.",
+          "Los espacios están diseñados para disolver las barreras entre huésped, visitante y comunidad local.",
+        ],
+      },
+      {
+        number: "02",
+        title: "Energía Colectiva",
+        subtitle: "Una energía que evoluciona y se comparte.",
+        body: [
+          "El hotel se mueve al ritmo de la ciudad. Desde mañanas tranquilas conectadas con el entorno, hasta tardes activas y noches vibrantes, el hotel se transforma a lo largo del día.",
+          "Inspirado en la energía colectiva del fútbol y la vida social, este ritmo se convierte en una experiencia compartida — donde la atmósfera, la emoción y la actividad construyen una sensación continua de conexión y celebración.",
+        ],
+      },
+      {
+        number: "03",
+        title: "Inmersión Cultural",
+        subtitle: "Una expresión contemporánea de la identidad local.",
+        body: [
+          "El hotel traduce la cultura de Heredia — café, fútbol, negocios y vida cotidiana — en elementos espaciales, sensoriales y experienciales.",
+          "No es temático; está profundamente arraigado en su contexto.",
+        ],
+      },
+    ],
     ctaTitle: "Hospédate en el centro de todo",
     ctaBody:
       "Haz de VISTAH tu base para explorar Heredia — desde el día de partido en el estadio hasta una mañana en los cafetales.",

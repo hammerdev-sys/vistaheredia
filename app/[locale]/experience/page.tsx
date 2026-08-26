@@ -49,9 +49,7 @@ export async function generateMetadata({
    EXPERIENCE PAGE
 ========================================================= */
 
-export default async function ExperiencePage({
-  params,
-}: PageProps) {
+export default async function ExperiencePage({ params }: PageProps) {
   const { locale } = await params;
 
   if (!isLocale(locale)) {
@@ -64,7 +62,6 @@ export default async function ExperiencePage({
 
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
-
       {/* =======================================================
           HERO
       ======================================================= */}
@@ -77,21 +74,16 @@ export default async function ExperiencePage({
         imageAlt="Panoramic view over Heredia, its stadium, and surrounding mountains"
       />
 
-      {/* =======================================================
-          SECTION 01 — HOTEL DESIGN
-      ======================================================= */}
+      {/*   SECTION 01 — HOTEL DESIGN*/}
 
       <section className="relative overflow-hidden border-b border-border/40 bg-background py-20 md:py-28">
-
         {/* Background glow */}
         <div className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[800px] -translate-x-1/2 rounded-full bg-primary/5 blur-[140px]" />
 
         <Container className="relative z-10">
-
           {/* Section heading */}
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
-
               <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                 {t.exteriorKicker}
               </span>
@@ -99,20 +91,14 @@ export default async function ExperiencePage({
               <h2 className="mt-5 font-serif text-3xl leading-tight tracking-tight md:text-5xl">
                 {t.exteriorTitle}
               </h2>
-
             </div>
           </Reveal>
 
           {/* Exterior images */}
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
-
             {t.exteriorViews.slice(0, 3).map((view, index) => (
-              <Reveal
-                key={view.image}
-                delay={index * 100}
-              >
+              <Reveal key={view.image} delay={index * 100}>
                 <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted">
-
                   <Image
                     src={view.image}
                     alt={view.alt}
@@ -128,18 +114,15 @@ export default async function ExperiencePage({
                       {view.label}
                     </span>
                   </div>
-
                 </div>
               </Reveal>
             ))}
-
           </div>
 
           {/* Large night image */}
           {t.exteriorViews[3] && (
             <Reveal delay={200}>
               <div className="group relative mt-5 aspect-[21/8] overflow-hidden rounded-2xl bg-muted">
-
                 <Image
                   src={t.exteriorViews[3].image}
                   alt={t.exteriorViews[3].alt}
@@ -155,7 +138,6 @@ export default async function ExperiencePage({
                     {t.exteriorViews[3].label}
                   </span>
                 </div>
-
               </div>
             </Reveal>
           )}
@@ -163,13 +145,11 @@ export default async function ExperiencePage({
           {/* Overview */}
           <Reveal delay={100}>
             <div className="mx-auto mt-20 max-w-4xl text-center md:mt-28">
-
               <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                 {t.overviewKicker}
               </span>
 
               <div className="mt-8 space-y-5">
-
                 {t.overviewBody.map((paragraph, index) => (
                   <p
                     key={index}
@@ -178,41 +158,31 @@ export default async function ExperiencePage({
                     {paragraph}
                   </p>
                 ))}
-
               </div>
-
             </div>
           </Reveal>
 
           {/* Spaces introduction */}
           <Reveal delay={150}>
             <div className="mx-auto mt-20 max-w-3xl text-center md:mt-28">
-
               <div className="mx-auto mb-6 h-px w-20 bg-primary/40" />
 
               <p className="text-pretty font-serif text-2xl leading-relaxed tracking-tight md:text-3xl">
                 {t.overviewSpacesIntro}
               </p>
-
             </div>
           </Reveal>
 
           {/* Spaces cards */}
           <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-
             {dict.spaces.items.map((space, index) => (
-              <Reveal
-                key={space.id}
-                delay={index * 70}
-              >
+              <Reveal key={space.id} delay={index * 70}>
                 <Link
                   href={`/${l}/spaces#${space.id}`}
                   className="group flex h-full min-h-[230px] flex-col justify-between rounded-2xl border border-border/50 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl"
                 >
-
                   {/* Number */}
                   <div className="flex items-center justify-between">
-
                     <span className="font-serif text-2xl text-primary/40 transition-colors group-hover:text-primary">
                       {String(index + 1).padStart(2, "0")}
                     </span>
@@ -220,12 +190,10 @@ export default async function ExperiencePage({
                     <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border text-sm text-muted-foreground transition-colors group-hover:border-primary group-hover:text-primary">
                       →
                     </span>
-
                   </div>
 
                   {/* Content */}
                   <div className="mt-10">
-
                     <h3 className="text-sm font-semibold uppercase tracking-[0.12em]">
                       {space.name}
                     </h3>
@@ -233,109 +201,156 @@ export default async function ExperiencePage({
                     <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                       {space.body}
                     </p>
-
                   </div>
 
                   {/* Hover line */}
                   <div className="mt-6 h-px w-0 bg-primary transition-all duration-500 group-hover:w-full" />
-
                 </Link>
               </Reveal>
             ))}
-
           </div>
-
         </Container>
       </section>
+      {/*  SECTION 03 — BRAND PILLARS */}
 
-      {/* SECTION 02 — EXPERIENCE HIGHLIGHTS*/}
+      <section className="relative overflow-hidden bg-black py-20 md:py-28 lg:py-32">
+        {/* Background Image */}
+        <Image
+          src="/images/pillar.png"
+          alt="VISTAH Brand Pillars"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/65" />
+
+        {/* Additional blur / contrast */}
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px]" />
+
+        <Container className="relative z-10">
+          {/* =================================================
+        SECTION HEADER
+    ================================================= */}
+
+          <Reveal>
+            <div className="mx-auto max-w-4xl text-center">
+              <h2 className="font-serif text-4xl font-normal uppercase tracking-[0.08em] text-white md:text-5xl lg:text-6xl">
+                {t.brandPillarsTitle}
+              </h2>
+
+              <p className="mx-auto mt-5 max-w-3xl text-sm font-light leading-relaxed tracking-[0.05em] text-white/80 md:text-base lg:text-lg">
+                {t.brandPillarsIntro}
+              </p>
+            </div>
+          </Reveal>
+
+          {/* =================================================
+        THREE CARDS
+    ================================================= */}
+
+          <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
+            {t.brandPillars.map((pillar, index) => (
+              <Reveal key={pillar.number} delay={index * 100}>
+                <div className="group relative h-full rounded-2xl border border-white/30 bg-black/25 px-6 py-8 backdrop-blur-sm transition-all duration-500 hover:bg-black/40 md:px-7 lg:px-8">
+                  {/* Top dot */}
+                  <div className="absolute -top-[5px] left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-white" />
+
+                  {/* Number */}
+                  <div className="text-center text-xs tracking-[0.2em] text-white/50">
+                    {pillar.number}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="mt-4 text-center text-xl font-semibold uppercase tracking-[0.04em] text-white md:text-lg lg:text-xl">
+                    {pillar.title}
+                  </h3>
+
+                  {/* Divider */}
+                  <div className="mx-auto mt-6 h-px w-12 bg-white/70 transition-all duration-500 group-hover:w-20" />
+
+                  {/* Subtitle */}
+                  <h4 className="mt-6 text-center text-sm font-semibold tracking-[0.04em] text-white md:text-base">
+                    {pillar.subtitle}
+                  </h4>
+
+                  {/* Body */}
+                  <div className="mt-6 space-y-5 text-center">
+                    {pillar.body.map((paragraph, i) => (
+                      <p
+                        key={i}
+                        className="text-sm font-light leading-[1.7] tracking-[0.06em] text-white/85"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
 
       <section className="relative overflow-hidden bg-background py-20 md:py-28 lg:py-32">
         <Container className="relative z-10">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
-
-      {/* =================================================
-          IMAGE — LEFT
-      ================================================= */}
+            {/*  IMAGE — LEFT */}
 
             <Reveal className="lg:col-span-6">
               <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted">
+                <Image
+                  src="/images/vistahrep.png"
+                  alt={t.destinationTitle}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
 
-          <Image
-            src="/images/vistahrep.png"
-            alt={t.destinationTitle}
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-
-          {/* Image overlay */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-
+                {/* Image overlay */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>
             </Reveal>
 
-
-      {/* =================================================
-          CONTENT — RIGHT
-      ================================================= */}
+            {/*   CONTENT — RIGHT*/}
 
             <Reveal delay={150} className="lg:col-span-6">
               <div className="relative">
+                {/* Kicker */}
+                <div className="mb-5">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                    <Sparkles className="h-3 w-3" />
 
-          {/* Kicker */}
-          <div className="mb-5">
+                    {t.destinationKicker}
+                  </span>
+                </div>
 
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                {/* Heading */}
+                <h2 className="max-w-2xl font-serif text-3xl leading-[1.08] tracking-tight md:text-4xl lg:text-5xl xl:text-6xl">
+                  {t.destinationTitle}
+                </h2>
 
-              <Sparkles className="h-3 w-3" />
+                {/* Content */}
+                <div className="mt-8 max-w-xl">
+                  <p className="text-pretty text-base font-light leading-[1.8] text-muted-foreground md:text-lg">
+                    {t.destinationBody1}
+                  </p>
+                </div>
 
-              {t.destinationKicker}
+                {/* Decorative line */}
+                <div className="mt-8 flex items-center gap-4">
+                  <div className="h-px w-16 bg-primary/60" />
 
-            </span>
-
-          </div>
-
-
-          {/* Heading */}
-          <h2 className="max-w-2xl font-serif text-3xl leading-[1.08] tracking-tight md:text-4xl lg:text-5xl xl:text-6xl">
-
-            {t.destinationTitle}
-
-          </h2>
-
-
-          {/* Content */}
-          <div className="mt-8 max-w-xl">
-
-            <p className="text-pretty text-base font-light leading-[1.8] text-muted-foreground md:text-lg">
-
-              {t.destinationBody1}
-
-            </p>
-
-          </div>
-
-
-          {/* Decorative line */}
-          <div className="mt-8 flex items-center gap-4">
-
-            <div className="h-px w-16 bg-primary/60" />
-
-            <div className="h-2 w-2 rounded-full bg-primary/60" />
-
-          </div>
-
-
+                  <div className="h-2 w-2 rounded-full bg-primary/60" />
+                </div>
               </div>
             </Reveal>
           </div>
         </Container>
       </section>
       <section className="bg-background">
-
         {experienceHighlights.map((item, index) => {
-
           const reversed = index % 2 === 1;
 
           return (
@@ -344,36 +359,28 @@ export default async function ExperiencePage({
               id={item.id}
               className={cn(
                 "relative overflow-hidden border-b border-border/30 py-20 md:py-32",
-                reversed ? "bg-secondary" : "bg-background"
+                reversed ? "bg-secondary" : "bg-background",
               )}
             >
-
               {/* Ambient glow */}
               <div
                 className={cn(
                   "pointer-events-none absolute top-1/2 h-[450px] w-[450px] -translate-y-1/2 rounded-full bg-primary/5 blur-[140px]",
-                  reversed ? "left-[-10%]" : "right-[-10%]"
+                  reversed ? "left-[-10%]" : "right-[-10%]",
                 )}
               />
 
               <Container className="relative z-10">
-
                 <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
-
                   {/* =================================================
                       IMAGE
                   ================================================= */}
 
                   <Reveal
-                    className={cn(
-                      "lg:col-span-7",
-                      reversed && "lg:order-2"
-                    )}
+                    className={cn("lg:col-span-7", reversed && "lg:order-2")}
                   >
                     <div className="group relative overflow-hidden rounded-2xl">
-
                       <div className="relative aspect-[16/10] overflow-hidden bg-muted">
-
                         <Image
                           src={item.image || "/placeholder.svg"}
                           alt={item.title[l]}
@@ -384,34 +391,23 @@ export default async function ExperiencePage({
                         />
 
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
                       </div>
-
                     </div>
                   </Reveal>
 
-                  {/* =================================================
-                      CONTENT
-                  ================================================= */}
+                  {/*     CONTENT*/}
 
                   <Reveal
                     delay={100}
-                    className={cn(
-                      "lg:col-span-5",
-                      reversed && "lg:order-1"
-                    )}
+                    className={cn("lg:col-span-5", reversed && "lg:order-1")}
                   >
-
                     <div className="flex flex-col">
-
                       {/* Kicker */}
                       <div className="mb-4">
-
                         <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                           <Sparkles className="h-3 w-3" />
                           {item.kicker[l]}
                         </span>
-
                       </div>
 
                       {/* Title */}
@@ -426,7 +422,6 @@ export default async function ExperiencePage({
 
                       {/* CTA */}
                       <div className="mt-8 border-t border-border/60 pt-6">
-
                         <CTALink
                           href={`/${l}/pre-booking`}
                           variant="primary"
@@ -434,48 +429,35 @@ export default async function ExperiencePage({
                           className="group inline-flex rounded-2xl px-8 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/20 active:translate-y-0 active:scale-[0.98]"
                         >
                           <span className="flex items-center gap-2">
-
                             {t.ctaButton}
 
                             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
-
                           </span>
                         </CTALink>
-
                       </div>
-
                     </div>
-
                   </Reveal>
-
                 </div>
-
               </Container>
             </section>
           );
         })}
-
       </section>
 
       {/* =======================================================
           SECTION 03 — LIVING DESTINATION
       ======================================================= */}
 
-     
-
       {/*
           FINAL CTA
  */}
 
       <section className="relative overflow-hidden bg-background py-24 md:py-32">
-
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[450px] w-[750px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[140px]" />
 
         <Container className="relative z-10">
-
           <Reveal>
             <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-
               {/* Label */}
               <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                 <Sparkles className="h-3 w-3" />
@@ -494,7 +476,6 @@ export default async function ExperiencePage({
 
               {/* Button */}
               <div className="mt-10">
-
                 <CTALink
                   href={`/${l}/pre-booking`}
                   variant="primary"
@@ -502,22 +483,16 @@ export default async function ExperiencePage({
                   className="group inline-flex rounded-2xl px-10 py-4 shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30 active:translate-y-0 active:scale-[0.97]"
                 >
                   <span className="flex items-center gap-2">
-
                     {t.ctaButton}
 
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
-
                   </span>
                 </CTALink>
-
               </div>
-
             </div>
           </Reveal>
-
         </Container>
       </section>
-
     </main>
   );
 }
