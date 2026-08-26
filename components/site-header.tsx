@@ -457,6 +457,7 @@ const moreLinks = [
         <div
           className="
             hidden
+            shrink-0
             items-center
             gap-3
             lg:flex
