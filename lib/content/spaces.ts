@@ -46,9 +46,9 @@ export const spaceDetails: Record<string, SpaceDetail> = {
   skyroom: {
     id: "skyroom",
     gallery: [
-      { type: "image", src: "/images/skyroom.png", alt: { en: "Skyroom lounge at dusk", es: "Lounge Skyroom al atardecer" } },
+      { type: "image", src: "/images/Skyroomnew.png", alt: { en: "Skyroom lounge at dusk", es: "Lounge Skyroom al atardecer" } },
       { type: "image", src: "/images/skyroom-2.png", alt: { en: "Skyroom bar and seating", es: "Barra y sala del Skyroom" } },
-      { type: "image", src: "/images/rooftop.png", alt: { en: "Views from the Skyroom", es: "Vistas desde el Skyroom" } },
+      { type: "image", src: "/images/AZO_PISCINA .jpg", alt: { en: "Views from the Skyroom", es: "Vistas desde el Skyroom" } },
     ],
     highlights: [
       { en: "Upper-floor lounge & cocktail bar", es: "Lounge y bar de cócteles en pisos superiores" },
@@ -142,7 +142,7 @@ export const spaceDetails: Record<string, SpaceDetail> = {
     gallery: [
       { type: "image", src: "/images/rooftop.png", alt: { en: "Rooftop pool and lounge", es: "Piscina y lounge en la azotea" } },
       { type: "image", src: "/images/rooftop-2.png", alt: { en: "Rooftop at golden hour", es: "Azotea a la hora dorada" } },
-      { type: "image", src: "/images/skyroom.png", alt: { en: "Lounge seating with city views", es: "Sala con vistas a la ciudad" } },
+      { type: "image", src: "/images/skyroomnew.png", alt: { en: "Lounge seating with city views", es: "Sala con vistas a la ciudad" } },
     ],
     highlights: [
       { en: "Rooftop pool crowning the hotel", es: "Piscina en la azotea que corona el hotel" },
@@ -173,41 +173,7 @@ export const spaceDetails: Record<string, SpaceDetail> = {
       ],
     },
   },
-  lobby: {
-    id: "lobby",
-    gallery: [
-      { type: "image", src: "/images/lobby-cafe.png", alt: { en: "Lobby coffee shop", es: "Cafetería del lobby" } },
-    ],
-    highlights: [
-      { en: "Social ground floor & coffee shop", es: "Planta baja social y cafetería" },
-      { en: "World-renowned Costa Rican coffee", es: "Café costarricense de renombre mundial" },
-      { en: "All-day gathering space", es: "Espacio de encuentro todo el día" },
-    ],
-    menu: {
-      note: {
-        en: "Single-origin Heredia coffee and fresh pastries.",
-        es: "Café de origen único de Heredia y repostería fresca.",
-      },
-      pdf: "/menus/lobby-cafe-menu.pdf",
-      sections: [
-        {
-          title: { en: "Coffee", es: "Café" },
-          items: [
-            { name: { en: "Espresso", es: "Espresso" }, price: "₡1,400" },
-            { name: { en: "Chorreado", es: "Chorreado" }, description: { en: "Traditional sock-brewed coffee", es: "Café de chorreador tradicional" }, price: "₡1,600" },
-            { name: { en: "Cortado", es: "Cortado" }, price: "₡1,700" },
-          ],
-        },
-        {
-          title: { en: "Bakery", es: "Panadería" },
-          items: [
-            { name: { en: "Prestiños", es: "Prestiños" }, price: "₡1,200" },
-            { name: { en: "Banana bread", es: "Pan de banano" }, price: "₡1,900" },
-          ],
-        },
-      ],
-    },
-  },
+ 
   rooms: {
     id: "rooms",
     gallery: [

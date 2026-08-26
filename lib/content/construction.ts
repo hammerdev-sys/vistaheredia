@@ -71,6 +71,6 @@ export const designRenders: { id: string; image: string; label: LocalizedText }[
   { id: "lobby", image: "/images/lobby-cafe.png", label: { en: "Lobby & Coffee", es: "Lobby y Café" } },
   { id: "room", image: "/images/guest-room.png", label: { en: "Guest Room", es: "Habitación" } },
   { id: "ballroom", image: "/images/ballroom.png", label: { en: "Ballroom", es: "Salón de Eventos" } },
-  { id: "skyroom", image: "/images/skyroom.png", label: { en: "Skyroom", es: "Skyroom" } },
+  { id: "skyroom", image: "/images/skyroomnew.png", label: { en: "Skyroom", es: "Skyroom" } },
   { id: "rooftop", image: "/images/rooftop.png", label: { en: "Rooftop", es: "Azotea" } },
 ]

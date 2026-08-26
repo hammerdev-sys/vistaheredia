@@ -18,16 +18,16 @@ const gallerySpaceImages = [
   { src: "/images/CORNER.jpg", alt: "The Corner sports bar terrace at VISTAH" },
   { src: "/images/lobby.png", alt: "VISTAH guest room with wardrobe" },
   { src: "/images/room-corner.png", alt: "VISTAH guest room with workspace" },
-  { src: "/images/skyroom.png", alt: "VISTAH en-suite bathroom" },
+  { src: "/images/skyroomnew.png", alt: "VISTAH en-suite bathroom" },
 ]
 
 const spaceImages: Record<string, string> = {
   rooms: "/images/guest-room.png",
-  lobby: "/images/lobby.png",
+  lobby: "/images/lobbyandcoffee.png",
   champions: "/images/champion.png",
   ballroom: "/images/ballroom3.png",
-  skyroom: "/images/skyroom.png",
-  rooftop: "/images/rooftop.png",
+  skyroom: "/images/skyroomnew.png",
+  rooftop: "/images/AZO_PISCINA .jpg",
 }
 
 export async function generateMetadata({
