@@ -157,6 +157,10 @@ export const es: Dictionary = {
       "VISTAH también está pensado para todas las preferencias. Las habitaciones insonorizadas ofrecen a los viajeros de negocios un santuario de tranquilidad, garantizando enfoque, productividad y descanso sin importar la actividad del estadio.",
     ],
     stadiumSpaces: ["Habitaciones", "Skyroom", "Champions Corner"],
+    scrollCue: "Desplázate",
+    discoverSpaces: "Descubrir Espacios",
+    finalCtaTitle: "Descubre un lugar moldeado por su entorno.",
+    exploreSpaces: "Explorar Espacios",
     locationKicker: "Ubicación",
     locationTitle: "En el centro de todo",
     locationBody:

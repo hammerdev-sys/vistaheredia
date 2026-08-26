@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   description:
     'The social heart of Heredia. A contemporary hotel integrated with the new Estadio Eladio Rosabal Cordero, opening Q4 2027. Tapestry Collection by Hilton.',
   generator: 'v0.app',
+    icons: {
+    icon: '/logo1.png',
+  },
 }
 
 export const viewport: Viewport = {

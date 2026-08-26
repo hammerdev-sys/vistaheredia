@@ -155,6 +155,10 @@ export const en = {
       "VISTAH is also thoughtfully designed for all preferences. Soundproof rooms provide business travelers with a quiet sanctuary, ensuring focus, productivity, and rest regardless of stadium activity.",
     ],
     stadiumSpaces: ["Guest Rooms", "Skyroom", "Champions Corner"],
+    scrollCue: "Scroll",
+    discoverSpaces: "Discover Spaces",
+    finalCtaTitle: "Discover a place shaped by its surroundings.",
+    exploreSpaces: "Explore Spaces",
     locationKicker: "Location",
     locationTitle: "At the center of it all",
     locationBody:
