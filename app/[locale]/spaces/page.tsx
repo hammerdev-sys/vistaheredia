@@ -18,7 +18,7 @@ const gallerySpaceImages = [
   { src: "/images/CORNER.jpg", alt: "The Corner sports bar terrace at VISTAH" },
   { src: "/images/lobby.png", alt: "VISTAH guest room with wardrobe" },
   { src: "/images/room-corner.png", alt: "VISTAH guest room with workspace" },
-  { src: "/images/skyroomnew.png", alt: "VISTAH en-suite bathroom" },
+  { src: "/images/Skyroomnew.png", alt: "VISTAH en-suite bathroom" },
 ]
 
 const spaceImages: Record<string, string> = {
