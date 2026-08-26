@@ -501,8 +501,19 @@ export const en = {
       "Its immediate proximity to the stadium expands the possibilities for entertainment, allowing guests to experience the energy of matches, shows, and cultural events from a privileged location.",
     ],
 
-    overviewSpacesIntro:
-      "The hotel is articulated through a series of spaces designed to accompany different moments of the day.",
+overviewSpacesIntro:
+  "The hotel is articulated through a series of spaces designed to accompany different moments of the day.",
+
+destinationKicker: "A Living Destination",
+
+destinationTitle:
+  "¿HOW DOES VISTAH REPRESENT THE CITY OF HEREDIA?",
+
+destinationBody1:
+  "The hotel strengthens the relationship between visitors and the local community through shared experiences, gathering spaces, and active programming that encourages interaction, lingering, and exchange.",
+
+destinationBody2:
+  "VISTAH proposes an experience integrated with Heredia, contributing to a more connected, active, and participatory city where hospitality, culture, business, and everyday life converge in one place.",
 
     ctaTitle: "Stay at the heart of it all",
 

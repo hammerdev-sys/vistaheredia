@@ -70,7 +70,7 @@ export const designRenders: { id: string; image: string; label: LocalizedText }[
   { id: "exterior", image: "/images/exterior-day.png", label: { en: "Exterior", es: "Exterior" } },
   { id: "lobby", image: "/images/lobby-cafe.png", label: { en: "Lobby & Coffee", es: "Lobby y Café" } },
   { id: "room", image: "/images/guest-room.png", label: { en: "Guest Room", es: "Habitación" } },
-  { id: "ballroom", image: "/images/ballroom.png", label: { en: "Ballroom", es: "Salón de Eventos" } },
-  { id: "skyroom", image: "/images/skyroomnew.png", label: { en: "Skyroom", es: "Skyroom" } },
-  { id: "rooftop", image: "/images/rooftop.png", label: { en: "Rooftop", es: "Azotea" } },
+  { id: "ballroom", image: "/images/ballroom3.png", label: { en: "Ballroom", es: "Salón de Eventos" } },
+  { id: "skyroom", image: "/images/Skyroomnew.png", label: { en: "Skyroom", es: "Skyroom" } },
+  { id: "rooftop", image: "/images/AZO_PISCINA .jpg", label: { en: "Rooftop", es: "Azotea" } },
 ]

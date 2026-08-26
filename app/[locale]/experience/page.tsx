@@ -248,10 +248,90 @@ export default async function ExperiencePage({
         </Container>
       </section>
 
-      {/* =======================================================
-          SECTION 02 — EXPERIENCE HIGHLIGHTS
-      ======================================================= */}
+      {/* SECTION 02 — EXPERIENCE HIGHLIGHTS*/}
 
+      <section className="relative overflow-hidden bg-background py-20 md:py-28 lg:py-32">
+        <Container className="relative z-10">
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
+
+      {/* =================================================
+          IMAGE — LEFT
+      ================================================= */}
+
+            <Reveal className="lg:col-span-6">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted">
+
+          <Image
+            src="/images/vistahrep.png"
+            alt={t.destinationTitle}
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          />
+
+          {/* Image overlay */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+
+              </div>
+            </Reveal>
+
+
+      {/* =================================================
+          CONTENT — RIGHT
+      ================================================= */}
+
+            <Reveal delay={150} className="lg:col-span-6">
+              <div className="relative">
+
+          {/* Kicker */}
+          <div className="mb-5">
+
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+
+              <Sparkles className="h-3 w-3" />
+
+              {t.destinationKicker}
+
+            </span>
+
+          </div>
+
+
+          {/* Heading */}
+          <h2 className="max-w-2xl font-serif text-3xl leading-[1.08] tracking-tight md:text-4xl lg:text-5xl xl:text-6xl">
+
+            {t.destinationTitle}
+
+          </h2>
+
+
+          {/* Content */}
+          <div className="mt-8 max-w-xl">
+
+            <p className="text-pretty text-base font-light leading-[1.8] text-muted-foreground md:text-lg">
+
+              {t.destinationBody1}
+
+            </p>
+
+          </div>
+
+
+          {/* Decorative line */}
+          <div className="mt-8 flex items-center gap-4">
+
+            <div className="h-px w-16 bg-primary/60" />
+
+            <div className="h-2 w-2 rounded-full bg-primary/60" />
+
+          </div>
+
+
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
       <section className="bg-background">
 
         {experienceHighlights.map((item, index) => {
@@ -378,8 +458,14 @@ export default async function ExperiencePage({
       </section>
 
       {/* =======================================================
-          FINAL CTA
+          SECTION 03 — LIVING DESTINATION
       ======================================================= */}
+
+     
+
+      {/*
+          FINAL CTA
+ */}
 
       <section className="relative overflow-hidden bg-background py-24 md:py-32">
 

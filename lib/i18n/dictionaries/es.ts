@@ -497,6 +497,12 @@ export const es: Dictionary = {
     ],
     overviewSpacesIntro:
       "El hotel se articula a través de una serie de espacios diseñados para acompañar los distintos momentos del día.",
+    destinationKicker: "Un Destino Vivo",
+    destinationTitle: "¿CÓMO REPRESENTA VISTAH A LA CIUDAD DE HEREDIA?",
+    destinationBody1:
+      "El hotel fortalece la relación entre los visitantes y la comunidad local a través de experiencias compartidas, espacios de encuentro y programación activa que fomenta la interacción, la permanencia y el intercambio.",
+    destinationBody2:
+      "VISTAH propone una experiencia integrada con Heredia, contribuyendo a una ciudad más conectada, activa y participativa donde la hospitalidad, la cultura, los negocios y la vida cotidiana convergen en un mismo lugar.",
     ctaTitle: "Hospédate en el centro de todo",
     ctaBody:
       "Haz de VISTAH tu base para explorar Heredia — desde el día de partido en el estadio hasta una mañana en los cafetales.",
