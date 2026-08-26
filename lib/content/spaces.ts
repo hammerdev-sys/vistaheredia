@@ -47,7 +47,7 @@ export const spaceDetails: Record<string, SpaceDetail> = {
     id: "skyroom",
     gallery: [
       { type: "image", src: "/images/Skyroomnew.png", alt: { en: "Skyroom lounge at dusk", es: "Lounge Skyroom al atardecer" } },
-      { type: "image", src: "/images/skyroomnew.png", alt: { en: "Skyroom bar and seating", es: "Barra y sala del Skyroom" } },
+      { type: "image", src: "/images/Skyroomnew.png", alt: { en: "Skyroom bar and seating", es: "Barra y sala del Skyroom" } },
       { type: "image", src: "/images/AZO_PISCINA .jpg", alt: { en: "Views from the Skyroom", es: "Vistas desde el Skyroom" } },
     ],
     highlights: [
@@ -142,7 +142,7 @@ export const spaceDetails: Record<string, SpaceDetail> = {
     gallery: [
       { type: "image", src: "/images/rooftop.png", alt: { en: "Rooftop pool and lounge", es: "Piscina y lounge en la azotea" } },
       { type: "image", src: "/images/rooftop-2.png", alt: { en: "Rooftop at golden hour", es: "Azotea a la hora dorada" } },
-      { type: "image", src: "/images/skyroomnew.png", alt: { en: "Lounge seating with city views", es: "Sala con vistas a la ciudad" } },
+      { type: "image", src: "/images/Skyroomnew.png", alt: { en: "Lounge seating with city views", es: "Sala con vistas a la ciudad" } },
     ],
     highlights: [
       { en: "Rooftop pool crowning the hotel", es: "Piscina en la azotea que corona el hotel" },
