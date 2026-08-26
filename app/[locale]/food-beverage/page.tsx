@@ -187,7 +187,7 @@ export default async function FoodBeveragePage({
       ========================================================= */}
       <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-black">
         <Image
-          src="/images/food-beverage.png"
+          src="/images/food/skyroom-main.png"
           alt="VISTAH Food and Beverage"
           fill
           priority
