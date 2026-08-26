@@ -47,7 +47,7 @@ export const spaceDetails: Record<string, SpaceDetail> = {
     id: "skyroom",
     gallery: [
       { type: "image", src: "/images/Skyroomnew.png", alt: { en: "Skyroom lounge at dusk", es: "Lounge Skyroom al atardecer" } },
-      { type: "image", src: "/images/skyroom-2.png", alt: { en: "Skyroom bar and seating", es: "Barra y sala del Skyroom" } },
+      { type: "image", src: "/images/skyroomnew.png", alt: { en: "Skyroom bar and seating", es: "Barra y sala del Skyroom" } },
       { type: "image", src: "/images/AZO_PISCINA .jpg", alt: { en: "Views from the Skyroom", es: "Vistas desde el Skyroom" } },
     ],
     highlights: [
