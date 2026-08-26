@@ -26,7 +26,7 @@ const spaceImages: Record<string, string> = {
   lobby: "/images/lobbyandcoffee.png",
   champions: "/images/champion.png",
   ballroom: "/images/ballroom3.png",
-  skyroom: "/images/skyroomnew.png",
+  skyroom: "/images/Skyroomnew.png",
   rooftop: "/images/AZO_PISCINA .jpg",
 }
 
