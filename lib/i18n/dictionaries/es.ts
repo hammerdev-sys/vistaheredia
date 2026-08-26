@@ -7,6 +7,7 @@ export const es: Dictionary = {
   nav: {
     home: "Inicio",
     story: "Nuestra Historia",
+    foodBeverage: "Comida y Bebida",
     spaces: "Espacios",
     rooms: "Habitaciones",
     experience: "Experiencia",

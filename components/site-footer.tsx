@@ -129,7 +129,7 @@ export function SiteFooter({
     { href: `${base}/experience`, label: nav.experience },
     { href: `${base}/spaces`, label: nav.spaces },
     { href: `${base}/rooms`, label: nav.rooms },
-    { href: `${base}/food-beverage`, label: "Food & Beverage" },
+    { href: `${base}/food-beverage`, label: nav.foodBeverage },
     { href: `${base}/journal`, label: nav.journal },
     { href: `${base}/events`, label: nav.events },
     { href: `${base}/story`, label: nav.story },

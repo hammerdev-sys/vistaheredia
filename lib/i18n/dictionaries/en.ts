@@ -5,6 +5,7 @@ export const en = {
   nav: {
     home: "Home",
     story: "Our Story",
+    foodBeverage: "Food & Beverage",
     spaces: "Spaces",
     rooms: "Rooms",
     experience: "Experience",

@@ -104,7 +104,7 @@ export function SiteHeader({
 const primaryLinks = [
   {
     href: `${base}/story`,
-    label: "Our Story",
+    label: nav.story,
     icon: BookOpen,
   },
   {
@@ -132,7 +132,7 @@ const primaryLinks = [
 const moreLinks = [
   {
     href: `${base}/food-beverage`,
-    label: "Food & Beverage",
+    label: nav.foodBeverage,
     icon: UtensilsCrossed,
   },
   {
