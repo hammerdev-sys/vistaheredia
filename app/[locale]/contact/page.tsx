@@ -130,7 +130,7 @@ export default async function ContactPage({
               <Reveal className="h-full">
                 <div className="rounded-2xl border border-border/80 bg-card p-8 md:p-10 shadow-sm">
                   <h2 className="font-serif text-2xl md:text-3xl text-card-foreground tracking-tight">{t.formTitle}</h2>
-                  <p className="mt-2 text-sm text-muted-foreground">Please complete the form below to connect with our team.</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{t.formSubtitle}</p>
 
                   <div className="mt-8">
                     <ContactForm dict={dict} />

@@ -216,10 +216,24 @@ export const en = {
         caption: "Activity",
       },
     ],
+    stadiumCard1Label: "01 · Match Days",
+    stadiumCard1Title: "Energy of the stadium",
+    stadiumCard1Body:
+      "Experience the atmosphere of matches and major gatherings while remaining connected to the city.",
+    stadiumCard2Label: "02 · Events",
+    stadiumCard2Title: "Beyond the game",
+    stadiumCard2Body:
+      "Concerts, celebrations and large-scale events extend the experience beyond match days.",
+    finalCtaKicker: "VISTAH · HEREDIA",
+    finalCtaBody:
+      "Explore the spaces, experiences and stories that make VISTAH part of Heredia.",
   },
   spaces: {
     kicker: "Spaces & Amenities",
     title: "A destination designed for connection",
+    galleryKicker: "Gallery",
+    galleryTitle: "Explore VISTAH",
+    galleryIntro: "Discover the spaces, atmosphere, and details of VISTAH Heredia.",
     intro:
       "Every space at VISTAH is crafted from warm woods, ceramic greens, woven textures, and natural light — shifting in mood from calm mornings to energetic nights.",
     items: [
@@ -352,6 +366,11 @@ export const en = {
       "Hammer Hospitality",
       "Other",
     ],
+    priorityAccessLabel: "Priority Access",
+    bottomKicker: "VISTAH Heredia",
+    bottomTitle: "Your Private Sanctuary Awaits",
+    bottomBody:
+      "Our dedicated concierge team is ready to assist you with personalized bookings and bespoke arrangements.",
   },
   careers: {
     kicker: "Careers",
@@ -424,6 +443,7 @@ export const en = {
       { label: "Central Heredia", value: "Walking distance" },
     ],
     formTitle: "Send a message",
+    formSubtitle: "Please complete the form below to connect with our team.",
     fields: {
       name: "Full name",
       email: "Email",
@@ -553,6 +573,7 @@ destinationBody2:
       },
     ],
 
+    ctaLabel: "Begin Your Journey",
     ctaTitle: "Stay at the heart of it all",
 
     ctaBody:
@@ -580,21 +601,25 @@ destinationBody2:
     venues: [
       {
         id: "skyroom",
+        title: "Skyroom",
         description:
           "The Skyroom is envisioned as an elevated gastronomic experience where atmosphere, city views, and sensory experiences come together within a contemporary setting. Throughout the day, the space evolves from a more relaxed and tranquil atmosphere into a dynamic, social, and immersive environment, establishing itself as one of the hotel's main gathering points. The culinary offering focuses on contemporary cuisine with refined presentation and a gastronomic experience aligned with the visual and spatial character of the rooftop.",
       },
       {
         id: "coffee",
+        title: "Coffee Shop",
         description:
           "The Coffee Shop is envisioned as a calm and welcoming space designed to accompany everyday life, casual encounters, and moments of pause. The concept revolves around specialty coffee culture and a light, contemporary gastronomic offering, creating an accessible setting where guests can enjoy fresh coffee, simple food, and a relaxed atmosphere throughout the day.",
       },
       {
         id: "champions",
+        title: "Champions Corner",
         description:
           "Champions Corner is a contemporary social bar inspired by collective energy, gathering, and celebration. With views toward the stadium, the space becomes an active social hub within the hotel, where the atmosphere evolves between day and night. Its gastronomic offering combines reinterpreted comfort food, Tex-Mex influences, cocktails, and shared experiences within a dynamic, vibrant, and social environment.",
       },
       {
         id: "ballroom",
+        title: "Ballroom",
         description:
           "The Ballroom's gastronomic experience is developed through flexibility, elegance, and collective celebration. Designed to host corporate events, social gatherings, and formal dinners, the space balances a sophisticated atmosphere with a welcoming feeling. The culinary proposal focuses on carefully curated gastronomic experiences, adapting to different formats and event types.",
       },

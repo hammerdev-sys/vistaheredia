@@ -297,14 +297,14 @@ export default async function SpacesPage({
 
     {/* Gallery Header */}
     <div className="mb-12 text-center">
-      <Kicker>Gallery</Kicker>
+      <Kicker>{t.galleryKicker}</Kicker>
 
       <h2 className="mt-3 font-serif text-3xl tracking-tight text-foreground md:text-5xl">
-        Explore VISTAH
+        {t.galleryTitle}
       </h2>
 
       <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-        Discover the spaces, atmosphere, and details of VISTAH Heredia.
+        {t.galleryIntro}
       </p>
     </div>
 

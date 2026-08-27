@@ -258,7 +258,7 @@ export default async function FoodBeveragePage({
                  
 
                   <h2 className="text-4xl font-light tracking-[0.12em] md:text-5xl lg:text-6xl">
-                    {venue.title}
+                    {venueText?.title || venue.title}
                   </h2>
 
                   <div className="my-7 h-px w-16 bg-black/30" />

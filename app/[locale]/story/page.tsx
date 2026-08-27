@@ -84,7 +84,7 @@ export default async function StoryPage({
             className="group absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-white/90 transition-colors hover:text-white"
           >
             <span className="text-[11px] font-medium uppercase tracking-[0.2em]">
-              Scroll
+              {t.scrollCue}
             </span>
             <span className="flex h-9 w-9 animate-bounce items-center justify-center rounded-full border border-white/70 bg-black/20 backdrop-blur-sm transition-transform group-hover:translate-y-0.5">
               ↓
@@ -300,7 +300,7 @@ export default async function StoryPage({
                 href={`/${locale}/contact`}
                 className="group inline-flex items-center gap-3 rounded-full bg-champagne px-7 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:bg-cream hover:shadow-lg hover:shadow-champagne/20 active:scale-95"
               >
-                <span>Discover Spaces</span>
+                <span>{t.discoverSpaces}</span>
 
                 <span className="transition-transform duration-300 group-hover:translate-x-1.5">
                   →
@@ -330,16 +330,15 @@ export default async function StoryPage({
 
                 <div className="flex flex-col justify-center p-5">
                   <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-champagne">
-                    01 · Match Days
+                    {t.stadiumCard1Label}
                   </span>
 
                   <h3 className="mt-2 font-serif text-xl text-cream">
-                    Energy of the stadium
+                    {t.stadiumCard1Title}
                   </h3>
 
                   <p className="mt-2 text-sm leading-relaxed text-cream/70">
-                    Experience the atmosphere of matches and major gatherings
-                    while remaining connected to the city.
+                    {t.stadiumCard1Body}
                   </p>
                 </div>
 
@@ -363,16 +362,15 @@ export default async function StoryPage({
 
                 <div className="flex flex-col justify-center p-5">
                   <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-champagne">
-                    02 · Events
+                    {t.stadiumCard2Label}
                   </span>
 
                   <h3 className="mt-2 font-serif text-xl text-cream">
-                    Beyond the game
+                    {t.stadiumCard2Title}
                   </h3>
 
                   <p className="mt-2 text-sm leading-relaxed text-cream/70">
-                    Concerts, celebrations and large-scale events extend the
-                    experience beyond match days.
+                    {t.stadiumCard2Body}
                   </p>
                 </div>
 
@@ -484,20 +482,19 @@ export default async function StoryPage({
       <section className="bg-background py-24 md:py-32">
         <Container>
           <div className="rounded-3xl border border-border/70 bg-secondary/40 px-6 py-16 text-center md:px-12 md:py-24">
-            <Kicker>VISTAH · HEREDIA</Kicker>
+            <Kicker>{t.finalCtaKicker}</Kicker>
             <h2 className="mx-auto mt-5 max-w-3xl font-serif text-4xl leading-tight tracking-tight md:text-6xl">
-              Discover a place shaped by its surroundings.
+              {t.finalCtaTitle}
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-              Explore the spaces, experiences and stories that make VISTAH part
-              of Heredia.
+              {t.finalCtaBody}
             </p>
             <div className="mt-8">
               <Link
                 href={`/${locale}/spaces`}
                 className="inline-flex items-center gap-3 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
               >
-                Explore Spaces
+                {t.exploreSpaces}
                 <span>→</span>
               </Link>
             </div>

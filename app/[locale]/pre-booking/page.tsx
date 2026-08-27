@@ -272,7 +272,7 @@ export default async function PreBookingPage({
                     "
                   >
                     <Sparkles className="h-3 w-3 animate-pulse" />
-                    Priority Access
+                    {t.priorityAccessLabel}
                   </span>
                 </div>
 
@@ -330,7 +330,7 @@ export default async function PreBookingPage({
                 text-primary
               "
             >
-              VISTAH Heredia
+              {t.bottomKicker}
             </span>
 
             <h2
@@ -343,7 +343,7 @@ export default async function PreBookingPage({
                 md:text-4xl
               "
             >
-              Your Private Sanctuary Awaits
+              {t.bottomTitle}
             </h2>
 
             <p
@@ -357,8 +357,7 @@ export default async function PreBookingPage({
                 text-muted-foreground
               "
             >
-              Our dedicated concierge team is ready to assist you with
-              personalized bookings and bespoke arrangements.
+              {t.bottomBody}
             </p>
 
             {/* Animated Primary Button */}

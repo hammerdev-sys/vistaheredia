@@ -461,7 +461,7 @@ export default async function ExperiencePage({ params }: PageProps) {
               {/* Label */}
               <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                 <Sparkles className="h-3 w-3" />
-                Begin Your Journey
+                {t.ctaLabel}
               </span>
 
               {/* Title */}

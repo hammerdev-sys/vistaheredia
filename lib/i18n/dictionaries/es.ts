@@ -218,10 +218,24 @@ export const es: Dictionary = {
         caption: "Actividad",
       },
     ],
+    stadiumCard1Label: "01 · Días de Partido",
+    stadiumCard1Title: "Energía del estadio",
+    stadiumCard1Body:
+      "Vive la atmósfera de los partidos y grandes encuentros mientras permaneces conectado con la ciudad.",
+    stadiumCard2Label: "02 · Eventos",
+    stadiumCard2Title: "Más allá del juego",
+    stadiumCard2Body:
+      "Conciertos, celebraciones y eventos a gran escala extienden la experiencia más allá de los días de partido.",
+    finalCtaKicker: "VISTAH · HEREDIA",
+    finalCtaBody:
+      "Explora los espacios, experiencias e historias que hacen de VISTAH parte de Heredia.",
   },
   spaces: {
     kicker: "Espacios y Amenidades",
     title: "Un destino diseñado para la conexión",
+    galleryKicker: "Galería",
+    galleryTitle: "Explora VISTAH",
+    galleryIntro: "Descubre los espacios, la atmósfera y los detalles de VISTAH Heredia.",
     intro:
       "Cada espacio de VISTAH está elaborado con maderas cálidas, verdes cerámicos, texturas tejidas y luz natural — cambiando de ánimo desde las mañanas tranquilas hasta las noches enérgicas.",
     items: [
@@ -356,6 +370,11 @@ export const es: Dictionary = {
       "Hammer Hospitality",
       "Otro",
     ],
+    priorityAccessLabel: "Acceso Prioritario",
+    bottomKicker: "VISTAH Heredia",
+    bottomTitle: "Tu Santuario Privado te Espera",
+    bottomBody:
+      "Nuestro equipo de conserjería dedicado está listo para ayudarte con reservas personalizadas y arreglos a la medida.",
   },
   careers: {
     kicker: "Empleo",
@@ -428,6 +447,7 @@ export const es: Dictionary = {
       { label: "Centro de Heredia", value: "A poca distancia a pie" },
     ],
     formTitle: "Envía un mensaje",
+    formSubtitle: "Completa el siguiente formulario para conectar con nuestro equipo.",
     fields: {
       name: "Nombre completo",
       email: "Correo electrónico",
@@ -540,6 +560,7 @@ export const es: Dictionary = {
         ],
       },
     ],
+    ctaLabel: "Comienza tu Viaje",
     ctaTitle: "Hospédate en el centro de todo",
     ctaBody:
       "Haz de VISTAH tu base para explorar Heredia — desde el día de partido en el estadio hasta una mañana en los cafetales.",
@@ -565,21 +586,25 @@ export const es: Dictionary = {
     venues: [
       {
         id: "skyroom",
+        title: "Skyroom",
         description:
           "El Skyroom está concebido como una experiencia gastronómica elevada donde la atmósfera, las vistas de la ciudad y las experiencias sensoriales se combinan en un entorno contemporáneo. A lo largo del día, el espacio evoluciona desde un ambiente más relajado y tranquilo hacia un entorno dinámico, social e inmersivo, consolidándose como uno de los principales puntos de encuentro del hotel. La oferta culinaria se enfoca en cocina contemporánea con presentación refinada y una experiencia gastronómica alineada con el carácter visual y espacial de la azotea.",
       },
       {
         id: "coffee",
+        title: "Coffee Shop",
         description:
           "El Coffee Shop está concebido como un espacio cálido y acogedor diseñado para acompañar la vida cotidiana, los encuentros casuales y las pausas del día. El concepto gira en torno a la cultura del café de especialidad y una oferta gastronómica ligera y contemporánea, creando un ambiente accesible donde los huéspedes pueden disfrutar de café fresco, comida sencilla y un ambiente relajado durante todo el día.",
       },
       {
         id: "champions",
+        title: "Champions Corner",
         description:
           "Champions Corner es un bar social contemporáneo inspirado en la energía colectiva, el encuentro y la celebración. Con vistas hacia el estadio, el espacio se convierte en un punto social activo dentro del hotel, donde el ambiente evoluciona entre el día y la noche. Su oferta gastronómica combina comida reconfortante reinterpretada, influencias Tex-Mex, cócteles y experiencias compartidas dentro de un entorno dinámico, vibrante y social.",
       },
       {
         id: "ballroom",
+        title: "Ballroom",
         description:
           "La experiencia gastronómica del Ballroom se desarrolla a través de la flexibilidad, la elegancia y la celebración colectiva. Diseñado para albergar eventos corporativos, reuniones sociales y cenas formales, el espacio equilibra una atmósfera sofisticada con una sensación acogedora. La propuesta culinaria se centra en experiencias gastronómicas cuidadosamente seleccionadas, adaptándose a diferentes formatos y tipos de eventos.",
       },
