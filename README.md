@@ -172,7 +172,7 @@ Reviewed the three form components; validation and structure are solid and consi
 
 | Variable | Purpose |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Canonical base URL (sitemap, robots, structured data, OG). Set to the production domain. |
+| `Endpoint` | Canonical base URL (sitemap, robots, structured data, OG). Set to the production domain. |
 | `RESEND_API_KEY` | Transactional email for form notifications. Required — without it, the API routes return `500 email_not_configured`. |
 | `EMAIL_FROM` | Verified Resend sender, e.g. `VISTAH Heredia <notifications@vistaheredia.com>`. Falls back to Resend's shared test sender. |
 | `CONTACT_TO_EMAILS` | Comma-separated recipients for the contact form. Falls back to `siteConfig.email`. |
@@ -198,7 +198,7 @@ This site is intentionally structured to convert into a full operating hotel sit
 ## Deployment checklist
 
 - [ ] Connect the GitHub repo to a Vercel project (preview deployments per PR).
-- [ ] Set `NEXT_PUBLIC_SITE_URL` to the production domain.
+- [ ] Set `Endpoint` to the production domain.
 - [ ] Add the Resend integration (or set `RESEND_API_KEY` manually), verify the sender domain, and set `EMAIL_FROM` + the `*_TO_EMAILS` vars.
 - [ ] Send a real test submission through each of the three forms in production and confirm the notification email arrives.
 - [ ] Replace placeholder logo with official SVG files.

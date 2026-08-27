@@ -1,6 +1,6 @@
 import { siteConfig } from "@/lib/content/site"
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.vistaheredia.com"
+const BASE_URL = process.env.Endpoint ?? "https://www.vistaheredia.com"
 
 // JSON-LD structured data for the hotel. Uses schema.org "Hotel" which
 // extends LocalBusiness — future-proofed for Hilton integration (add

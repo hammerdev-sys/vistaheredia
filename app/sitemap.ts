@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 import { locales } from "@/lib/i18n/config"
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.vistaheredia.com"
+const BASE_URL = process.env.Endpoint ?? "https://www.vistaheredia.com"
 
 const routes = ["", "/story", "/spaces", "/construction", "/pre-booking", "/careers", "/contact"]
 
