@@ -65,6 +65,7 @@ export const progressUpdates: ProgressUpdate[] = [
   },
 ]
 
+
 /** Design renders shown on the construction page. */
 export const designRenders: { id: string; image: string; label: LocalizedText }[] = [
   { id: "exterior", image: "/images/exterior-day.png", label: { en: "Exterior", es: "Exterior" } },
