@@ -31,7 +31,7 @@ export async function generateMetadata({
     path: "/pre-booking",
     title: `${dict.sales.title} — VISTAH Heredia`,
     description: dict.sales.intro,
-    image: "/images/ballroom.png",
+    image: "/images/ballroom3.png",
   })
 }
 
@@ -55,7 +55,7 @@ export default async function PreBookingPage({
         kicker={t.kicker}
         title={t.title}
         intro={t.intro}
-        image="/images/ballroom.png"
+        image="/images/ballroom3.png"
         imageAlt="Sixth-floor ballroom with panoramic stadium views at VISTAH Heredia"
       />
 
