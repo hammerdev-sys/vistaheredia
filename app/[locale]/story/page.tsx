@@ -103,7 +103,7 @@ export default async function StoryPage({
         <img
           src="/logo1.png"
           alt="VISTAH"
-          className="h-40 w-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] md:h-56 lg:h-80"
+        className="h-40 w-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] md:h-56 lg:h-90"
         />
       </div>
 
