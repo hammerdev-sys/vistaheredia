@@ -39,7 +39,7 @@ export const experienceHighlights: ExperienceHighlight[] = [
   },
   {
     id: "gastronomy",
-    image: "/images/experience-gastronomy.png",
+    image: "/images/food/ajos.jpg",
     kicker: { en: "Flavors of the valley", es: "Sabores del valle" },
     title: { en: "Local gastronomy", es: "Gastronomía local" },
     body: {
@@ -49,7 +49,7 @@ export const experienceHighlights: ExperienceHighlight[] = [
   },
   {
     id: "culture",
-    image: "/images/experience-culture.png",
+    image: "/images/culture2.png",
     kicker: { en: "City of Flowers", es: "Ciudad de las Flores" },
     title: { en: "Culture & heritage", es: "Cultura y patrimonio" },
     body: {

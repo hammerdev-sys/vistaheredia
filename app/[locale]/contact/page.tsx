@@ -1,41 +1,41 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
-import { MapPin, Mail, Phone, Briefcase, Handshake } from "lucide-react"
-import { isLocale, type Locale } from "@/lib/i18n/config"
-import { getDictionary } from "@/lib/i18n/dictionaries"
-import { buildMetadata } from "@/lib/i18n/metadata"
-import { siteConfig } from "@/lib/content/site"
-import { PageHero } from "@/components/page-hero"
-import { Container } from "@/components/section"
-import { ContactForm } from "@/components/forms/contact-form"
-import { Reveal } from "@/components/reveal"
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { MapPin, Mail, Phone, Briefcase, Handshake } from "lucide-react";
+import { isLocale, type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+import { buildMetadata } from "@/lib/i18n/metadata";
+import { siteConfig } from "@/lib/content/site";
+import { PageHero } from "@/components/page-hero";
+import { Container } from "@/components/section";
+import { ContactForm } from "@/components/forms/contact-form";
+import { Reveal } from "@/components/reveal";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params
-  if (!isLocale(locale)) return {}
-  const dict = getDictionary(locale)
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+  const dict = getDictionary(locale);
   return buildMetadata({
     locale,
     path: "/contact",
     title: `${dict.contact.title} — VISTAH Heredia`,
     description: dict.contact.intro,
     image: "/images/exterior-day.png",
-  })
+  });
 }
 
 export default async function ContactPage({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params
-  if (!isLocale(locale)) notFound()
-  const dict = getDictionary(locale as Locale)
-  const t = dict.contact
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  const dict = getDictionary(locale as Locale);
+  const t = dict.contact;
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
@@ -50,47 +50,47 @@ export default async function ContactPage({
       <section className="bg-background py-20 md:py-28">
         <Container>
           <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
-            
             {/* Left Column: Info Cards, Directions & Map */}
             <div className="lg:col-span-6 flex flex-col gap-8">
-              
               {/* Info Cards Grid */}
               <div className="grid gap-4 sm:grid-cols-2">
-                <Reveal delay={0} className="h-full">
-                  <InfoCard icon={<MapPin className="h-5 w-5" />} title={t.addressTitle}>
-                    {t.address}
-                  </InfoCard>
-                </Reveal>
-
+                {/* Email */}
                 <Reveal delay={60} className="h-full">
-                  <InfoCard icon={<Mail className="h-5 w-5" />} title={t.emailTitle}>
-                    <a href={`mailto:${siteConfig.email}`} className="transition-colors hover:text-primary underline underline-offset-4 decoration-border">
+                  <InfoCard
+                    icon={<Mail className="h-5 w-5" />}
+                    title={t.emailTitle}
+                  >
+                    <a
+                      href={`mailto:${siteConfig.email}`}
+                      className="break-words underline decoration-border underline-offset-4 transition-colors hover:text-primary"
+                    >
                       {siteConfig.email}
                     </a>
                   </InfoCard>
                 </Reveal>
 
+                {/* Phone */}
                 <Reveal delay={120} className="h-full">
-                  <InfoCard icon={<Phone className="h-5 w-5" />} title={t.phoneTitle}>
-                    <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="transition-colors hover:text-primary underline underline-offset-4 decoration-border">
+                  <InfoCard
+                    icon={<Phone className="h-5 w-5" />}
+                    title={t.phoneTitle}
+                  >
+                    <a
+                      href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+                      className="break-words underline decoration-border underline-offset-4 transition-colors hover:text-primary"
+                    >
                       {siteConfig.phone}
                     </a>
                   </InfoCard>
                 </Reveal>
 
-                <Reveal delay={180} className="h-full">
-                  <InfoCard icon={<Handshake className="h-5 w-5" />} title={t.salesTitle}>
-                    <a href={`mailto:${siteConfig.salesEmail}`} className="transition-colors hover:text-primary underline underline-offset-4 decoration-border">
-                      {siteConfig.salesEmail}
-                    </a>
-                  </InfoCard>
-                </Reveal>
-
-                <Reveal delay={240} className="sm:col-span-2 h-full">
-                  <InfoCard icon={<Briefcase className="h-5 w-5" />} title={t.careersTitle}>
-                    <a href={`mailto:${siteConfig.careersEmail}`} className="transition-colors hover:text-primary underline underline-offset-4 decoration-border">
-                      {siteConfig.careersEmail}
-                    </a>
+                {/* Address - wider */}
+                <Reveal delay={0} className="h-full sm:col-span-2">
+                  <InfoCard
+                    icon={<MapPin className="h-5 w-5" />}
+                    title={t.addressTitle}
+                  >
+                    {t.address}
                   </InfoCard>
                 </Reveal>
               </div>
@@ -98,12 +98,21 @@ export default async function ContactPage({
               {/* Directions Box */}
               <Reveal delay={300}>
                 <div className="rounded-2xl border border-border/80 bg-card p-6 md:p-8 shadow-sm">
-                  <h2 className="font-serif text-xl text-card-foreground tracking-tight">{t.directionsTitle}</h2>
+                  <h2 className="font-serif text-xl text-card-foreground tracking-tight">
+                    {t.directionsTitle}
+                  </h2>
                   <dl className="mt-5 divide-y divide-border/60">
                     {t.directions.map((d) => (
-                      <div key={d.label} className="flex items-center justify-between gap-6 py-3.5 first:pt-0 last:pb-0">
-                        <dt className="text-sm text-muted-foreground">{d.label}</dt>
-                        <dd className="text-right text-sm font-medium text-card-foreground">{d.value}</dd>
+                      <div
+                        key={d.label}
+                        className="flex items-center justify-between gap-6 py-3.5 first:pt-0 last:pb-0"
+                      >
+                        <dt className="text-sm text-muted-foreground">
+                          {d.label}
+                        </dt>
+                        <dd className="text-right text-sm font-medium text-card-foreground">
+                          {d.value}
+                        </dd>
                       </div>
                     ))}
                   </dl>
@@ -122,15 +131,18 @@ export default async function ContactPage({
                   />
                 </div>
               </Reveal>
-
             </div>
 
             {/* Right Column: Contact Form */}
             <div className="lg:col-span-6 lg:sticky lg:top-28">
               <Reveal className="h-full">
                 <div className="rounded-2xl border border-border/80 bg-card p-8 md:p-10 shadow-sm">
-                  <h2 className="font-serif text-2xl md:text-3xl text-card-foreground tracking-tight">{t.formTitle}</h2>
-                  <p className="mt-2 text-sm text-muted-foreground">{t.formSubtitle}</p>
+                  <h2 className="font-serif text-2xl md:text-3xl text-card-foreground tracking-tight">
+                    {t.formTitle}
+                  </h2>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {t.formSubtitle}
+                  </p>
 
                   <div className="mt-8">
                     <ContactForm dict={dict} />
@@ -138,12 +150,11 @@ export default async function ContactPage({
                 </div>
               </Reveal>
             </div>
-
           </div>
         </Container>
       </section>
     </div>
-  )
+  );
 }
 
 function InfoCard({
@@ -151,9 +162,9 @@ function InfoCard({
   title,
   children,
 }: {
-  icon: React.ReactNode
-  title: string
-  children: React.ReactNode
+  icon: React.ReactNode;
+  title: string;
+  children: React.ReactNode;
 }) {
   return (
     <div className="flex flex-col gap-3 rounded-xl border border-border/80 bg-card p-6 shadow-sm transition-all duration-300 hover:border-border hover:shadow-md">
@@ -163,7 +174,9 @@ function InfoCard({
       <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
         {title}
       </h3>
-      <div className="text-pretty text-sm leading-relaxed text-card-foreground">{children}</div>
+      <div className="text-pretty text-sm leading-relaxed text-card-foreground">
+        {children}
+      </div>
     </div>
-  )
+  );
 }

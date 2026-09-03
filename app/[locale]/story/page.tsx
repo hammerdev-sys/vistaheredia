@@ -55,43 +55,57 @@ export default async function StoryPage({
 
   return (
     <main className="flex flex-col min-h-screen">
-      {/* =====================================================
-         WHAT IS VISTAH (BANNER HERO)
-      ===================================================== */}
-      <section className="relative overflow-hidden bg-background">
-        <div className="relative h-[520px] w-full md:h-[650px] lg:h-[720px]">
-          <Image
-            src="/images/what-vistah.png"
-            alt="Heredia city and surrounding mountains"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-black/10" />
-          <div className="absolute inset-0 flex items-start justify-center px-6 pt-24 md:pt-32 lg:pt-40">
-            <div className="w-full max-w-5xl border border-white/90 px-8 py-10 md:px-16 md:py-12 lg:px-20 lg:py-14 bg-black/20 backdrop-blur-xs">
-              <h2 className="text-center font-sans text-4xl font-bold uppercase tracking-[0.08em] text-white md:text-5xl lg:text-6xl">
-                {t.whatIsVistah}
-              </h2>
-            </div>
-          </div>
+     
+    <section className="relative overflow-hidden bg-background">
+  <div className="relative h-[520px] w-full md:h-[650px] lg:h-[720px]">
+    <Image
+      src="/images/what-vistah.png"
+      alt="Heredia city and surrounding mountains"
+      fill
+      priority
+      sizes="100vw"
+      className="object-cover object-center"
+    />
 
-          {/* Scroll cue */}
-          <a
-            href="#story-acronym"
-            aria-label="Scroll to explore"
-            className="group absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-white/90 transition-colors hover:text-white"
-          >
-            <span className="text-[11px] font-medium uppercase tracking-[0.2em]">
-              {t.scrollCue}
-            </span>
-            <span className="flex h-9 w-9 animate-bounce items-center justify-center rounded-full border border-white/70 bg-black/20 backdrop-blur-sm transition-transform group-hover:translate-y-0.5">
-              ↓
-            </span>
-          </a>
-        </div>
-      </section>
+    <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40" />
+
+    <div className="absolute inset-0 flex flex-col items-center px-6 pt-16 md:pt-20 lg:pt-24">
+
+      {/* Top Text Box */}
+
+        <h2 className="text-center font-sans text-3xl font-bold uppercase tracking-[0.12em] text-white md:text-4xl lg:text-5xl drop-shadow-md">
+          {t.whatIsVistah}
+        </h2>
+      
+
+      {/* VISTAH Logo */}
+      <div className="mt-2 md:mt-3 lg:mt-4">
+        <img
+          src="/logo1.png"
+          alt="VISTAH"
+          className="h-32 w-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] md:h-44 lg:h-92"
+        />
+      </div>
+
+    </div>
+
+    {/* Scroll cue */}
+    <a
+      href="#story-acronym"
+      aria-label="Scroll to explore"
+      className="group absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-white/80 transition-all duration-300 hover:text-white"
+    >
+      <span className="text-[10px] font-semibold uppercase tracking-[0.25em] drop-shadow-sm">
+        {t.scrollCue}
+      </span>
+
+      <span className="flex h-8 w-8 animate-bounce items-center justify-center rounded-full border border-white/60 bg-black/30 backdrop-blur-md">
+        ↓
+      </span>
+    </a>
+
+  </div>
+</section>
       <section
         id="story-acronym"
         className="relative overflow-hidden bg-background py-20 md:py-32 scroll-mt-24"
@@ -141,7 +155,6 @@ export default async function StoryPage({
       {/* =====================================================
          MEANING OF VISTAH (ACRONYM)
       ===================================================== */}
-     
 
       {/* =====================================================
          VISTAH IN CONTEXT — MAPS
@@ -189,7 +202,6 @@ export default async function StoryPage({
           </div>
         </Container>
       </section>
-
 
       {/* =====================================================
          HOTEL VIEWS
@@ -239,153 +251,136 @@ export default async function StoryPage({
          STADIUM CONNECTION
       ===================================================== */}
       <section className="overflow-hidden bg-background">
-  <div className="relative min-h-[700px] overflow-hidden md:min-h-[760px]">
+        <div className="relative min-h-[700px] overflow-hidden md:min-h-[760px]">
+          {/* Background Image */}
+          <Image
+            src="/images/stadium-connection.png"
+            alt="VISTAH Heredia integrated with the stadium and surrounding landscape"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+            priority
+          />
 
-    {/* Background Image */}
-    <Image
-      src="/images/stadium-connection.png"
-      alt="VISTAH Heredia integrated with the stadium and surrounding landscape"
-      fill
-      sizes="100vw"
-      className="object-cover object-center"
-      priority
-    />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/35" />
 
-    {/* Dark Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/75 to-charcoal/35" />
+          {/* Main Content */}
+          <Container className="relative z-10 min-h-[700px] md:min-h-[760px]">
+            <div className="flex min-h-[700px] items-center py-20 md:min-h-[760px] md:py-24">
+              <div className="grid w-full items-center gap-12 lg:grid-cols-[1fr_420px] lg:gap-16">
+                {/* LEFT CONTENT */}
+                <div className="max-w-2xl">
+                  <Kicker
+                    tone="light"
+                    className="mb-4 inline-block rounded-full border border-white/15 bg-white/10 px-4 py-1.5 backdrop-blur-md"
+                  >
+                    {t.stadiumKicker}
+                  </Kicker>
 
-    {/* Main Content */}
-    <Container className="relative z-10 min-h-[700px] md:min-h-[760px]">
+                  <h2 className="mt-4 max-w-xl text-balance font-serif text-4xl leading-tight tracking-tight text-cream md:text-5xl lg:text-[3.5rem]">
+                    {t.stadiumTitle}
+                  </h2>
 
-      <div className="flex min-h-[700px] items-center py-20 md:min-h-[760px] md:py-24">
+                  {/* Paragraphs */}
+                  <div className="mt-7 max-w-xl space-y-5 text-pretty text-base leading-relaxed text-cream/85 md:text-lg">
+                    {t.stadiumBody.map((paragraph, i) => (
+                      <p key={i}>{paragraph}</p>
+                    ))}
+                  </div>
 
-        <div className="grid w-full items-center gap-12 lg:grid-cols-[1fr_420px] lg:gap-16">
+                  {/* Spaces */}
+                  <div className="mt-7 flex flex-wrap gap-2.5">
+                    {t.stadiumSpaces.map((space) => (
+                      <span
+                        key={space}
+                        className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.12em] text-cream/90 backdrop-blur-sm"
+                      >
+                        {space}
+                      </span>
+                    ))}
+                  </div>
 
-          {/* LEFT CONTENT */}
-          <div className="max-w-2xl">
+                  {/* CTA */}
+                  <div className="mt-8">
+                    <Link
+                      href={`/${locale}/contact`}
+                      className="group inline-flex items-center gap-3 rounded-full bg-champagne px-7 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:bg-cream hover:shadow-lg hover:shadow-champagne/20 active:scale-95"
+                    >
+                      <span>{t.discoverSpaces}</span>
 
-            <Kicker
-              tone="light"
-              className="mb-4 inline-block rounded-full border border-white/15 bg-white/10 px-4 py-1.5 backdrop-blur-md"
-            >
-              {t.stadiumKicker}
-            </Kicker>
-
-            <h2 className="mt-4 max-w-xl text-balance font-serif text-4xl leading-tight tracking-tight text-cream md:text-5xl lg:text-[3.5rem]">
-              {t.stadiumTitle}
-            </h2>
-
-            {/* Paragraphs */}
-            <div className="mt-7 max-w-xl space-y-5 text-pretty text-base leading-relaxed text-cream/85 md:text-lg">
-              {t.stadiumBody.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-
-            {/* Spaces */}
-            <div className="mt-7 flex flex-wrap gap-2.5">
-              {t.stadiumSpaces.map((space) => (
-                <span
-                  key={space}
-                  className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.12em] text-cream/90 backdrop-blur-sm"
-                >
-                  {space}
-                </span>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <div className="mt-8">
-              <Link
-                href={`/${locale}/contact`}
-                className="group inline-flex items-center gap-3 rounded-full bg-champagne px-7 py-3.5 text-sm font-medium text-charcoal transition-all duration-300 hover:bg-cream hover:shadow-lg hover:shadow-champagne/20 active:scale-95"
-              >
-                <span>{t.discoverSpaces}</span>
-
-                <span className="transition-transform duration-300 group-hover:translate-x-1.5">
-                  →
-                </span>
-              </Link>
-            </div>
-
-          </div>
-
-          {/* RIGHT IMAGE + INFO CARDS */}
-          <div className="hidden space-y-5 lg:block">
-
-            {/* CARD 01 */}
-            <div className="group overflow-hidden rounded-2xl border border-white/15 bg-black/30 shadow-2xl backdrop-blur-sm">
-
-              <div className="grid grid-cols-[150px_1fr]">
-
-                <div className="relative h-full min-h-[145px] overflow-hidden">
-                  <Image
-                    src="/images/stadium3.png"
-                    alt="Stadium match night atmosphere"
-                    fill
-                    sizes="150px"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                      <span className="transition-transform duration-300 group-hover:translate-x-1.5">
+                        →
+                      </span>
+                    </Link>
+                  </div>
                 </div>
 
-                <div className="flex flex-col justify-center p-5">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-champagne">
-                    {t.stadiumCard1Label}
-                  </span>
+                {/* RIGHT IMAGE + INFO CARDS */}
+                <div className="hidden space-y-5 lg:block">
+                  {/* CARD 01 */}
+                  <div className="group overflow-hidden rounded-2xl border border-white/15 bg-black/30 shadow-2xl backdrop-blur-sm">
+                    <div className="grid grid-cols-[150px_1fr]">
+                      <div className="relative h-full min-h-[145px] overflow-hidden">
+                        <Image
+                          src="/images/stadium3.png"
+                          alt="Stadium match night atmosphere"
+                          fill
+                          sizes="150px"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                      </div>
 
-                  <h3 className="mt-2 font-serif text-xl text-cream">
-                    {t.stadiumCard1Title}
-                  </h3>
+                      <div className="flex flex-col justify-center p-5">
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-champagne">
+                          {t.stadiumCard1Label}
+                        </span>
 
-                  <p className="mt-2 text-sm leading-relaxed text-cream/70">
-                    {t.stadiumCard1Body}
-                  </p>
+                        <h3 className="mt-2 font-serif text-xl text-cream">
+                          {t.stadiumCard1Title}
+                        </h3>
+
+                        <p className="mt-2 text-sm leading-relaxed text-cream/70">
+                          {t.stadiumCard1Body}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CARD 02 */}
+                  <div className="group overflow-hidden rounded-2xl border border-white/15 bg-black/30 shadow-2xl backdrop-blur-sm">
+                    <div className="grid grid-cols-[150px_1fr]">
+                      <div className="relative h-full min-h-[145px] overflow-hidden">
+                        <Image
+                          src="/images/stadium2.png"
+                          alt="Stadium concert and event atmosphere"
+                          fill
+                          sizes="150px"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                      </div>
+
+                      <div className="flex flex-col justify-center p-5">
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-champagne">
+                          {t.stadiumCard2Label}
+                        </span>
+
+                        <h3 className="mt-2 font-serif text-xl text-cream">
+                          {t.stadiumCard2Title}
+                        </h3>
+
+                        <p className="mt-2 text-sm leading-relaxed text-cream/70">
+                          {t.stadiumCard2Body}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
               </div>
             </div>
-
-            {/* CARD 02 */}
-            <div className="group overflow-hidden rounded-2xl border border-white/15 bg-black/30 shadow-2xl backdrop-blur-sm">
-
-              <div className="grid grid-cols-[150px_1fr]">
-
-                <div className="relative h-full min-h-[145px] overflow-hidden">
-                  <Image
-                    src="/images/stadium2.png"
-                    alt="Stadium concert and event atmosphere"
-                    fill
-                    sizes="150px"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-
-                <div className="flex flex-col justify-center p-5">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-champagne">
-                    {t.stadiumCard2Label}
-                  </span>
-
-                  <h3 className="mt-2 font-serif text-xl text-cream">
-                    {t.stadiumCard2Title}
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-relaxed text-cream/70">
-                    {t.stadiumCard2Body}
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-
+          </Container>
         </div>
-
-      </div>
-
-    </Container>
-  </div>
-</section>
+      </section>
       {/* =====================================================
          VALUES
       ===================================================== */}

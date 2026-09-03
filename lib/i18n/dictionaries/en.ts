@@ -78,7 +78,7 @@ export const en = {
     ctaCareersButton: "View open roles",
   },
   story: {
-    whatIsVistah: "What is VISTAH?",
+    whatIsVistah: "What is",
     kicker: "Our Story",
     title: "The meaning of VISTAH",
     intro:

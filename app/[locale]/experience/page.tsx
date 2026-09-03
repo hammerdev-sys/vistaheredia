@@ -444,9 +444,6 @@ export default async function ExperiencePage({ params }: PageProps) {
         })}
       </section>
 
-      {/* =======================================================
-          SECTION 03 — LIVING DESTINATION
-      ======================================================= */}
 
       {/*
           FINAL CTA

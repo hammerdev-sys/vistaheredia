@@ -8,7 +8,7 @@ export const siteConfig = {
   legalName: 'VISTAH Heredia, Tapestry Collection by Hilton',
   domain: 'www.vistaheredia.com',
   openingYear: 2027,
-  email: 'hello@vistaheredia.com',
+  email: 'info@vistaheredia.com',
   salesEmail: 'sales@vistaheredia.com',
   careersEmail: 'careers@vistaheredia.com',
   phone: '+506 2222 0000',
