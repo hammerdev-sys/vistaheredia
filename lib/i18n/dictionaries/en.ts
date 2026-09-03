@@ -78,6 +78,12 @@ export const en = {
     ctaCareersButton: "View open roles",
   },
   story: {
+    heroKicker: "Opening Q4 2027 · Heredia, Costa Rica",
+    heroTitle: "The social heart of Heredia",
+    heroSubtitle:
+      "A contemporary social hotel woven into the energy of the new Estadio Eladio Rosabal Cordero — where the city gathers, celebrates, and belongs.",
+    heroPrebook: "Pre-Book Rooms & Events",
+    heroExplore: "Explore the Story",
     whatIsVistah: "What is",
     kicker: "Our Story",
     title: "The meaning of VISTAH",

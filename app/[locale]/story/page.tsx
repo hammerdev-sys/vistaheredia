@@ -10,6 +10,7 @@ import { buildMetadata } from "@/lib/i18n/metadata";
 import { PageHero } from "@/components/page-hero";
 import { Container, SectionHeading, Kicker } from "@/components/section";
 import { Reveal } from "@/components/reveal";
+import { CTALink } from "@/components/brand/cta-link";
 
 /* =========================================================
    METADATA
@@ -56,56 +57,63 @@ export default async function StoryPage({
   return (
     <main className="flex flex-col min-h-screen">
      
-    <section className="relative overflow-hidden bg-background">
-  <div className="relative h-[520px] w-full md:h-[650px] lg:h-[720px]">
-    <Image
-      src="/images/what-vistah.png"
-      alt="Heredia city and surrounding mountains"
-      fill
-      priority
-      sizes="100vw"
-      className="object-cover object-center"
-    />
+ <section className="relative flex min-h-[92vh] items-end overflow-hidden">
+  <Image
+    src="/images/vistah-story.jpeg"
+    alt="Heredia city and surrounding mountains"
+    fill
+    priority
+    sizes="100vw"
+    className="object-cover object-center"
+  />
 
-    <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40" />
+  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/45 to-charcoal/30" />
+  <div className="absolute inset-0 bg-gradient-to-r from-charcoal/50 to-transparent" />
 
-    <div className="absolute inset-0 flex flex-col items-center px-6 pt-16 md:pt-20 lg:pt-24">
+  <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-16 md:pb-24 lg:px-8">
+    <div className="grid items-end gap-10 lg:grid-cols-2">
 
-      {/* Top Text Box */}
+      {/* Left Content */}
+      <div>
+        <p className="mb-5 font-sans text-xs font-medium uppercase tracking-[0.28em] text-champagne">
+          {t.heroKicker}
+        </p>
 
-        <h2 className="text-center font-sans text-3xl font-bold uppercase tracking-[0.12em] text-white md:text-4xl lg:text-5xl drop-shadow-md">
-          {t.whatIsVistah}
-        </h2>
-      
+        <h1 className="max-w-3xl text-balance font-serif text-4xl leading-[1.05] text-cream md:text-6xl lg:text-7xl">
+          {t.heroTitle}
+        </h1>
 
-      {/* VISTAH Logo */}
-      <div className="mt-2 md:mt-3 lg:mt-4">
+        <p className="mt-6 max-w-xl text-pretty font-sans text-lg leading-relaxed text-cream/85">
+          {t.heroSubtitle}
+        </p>
+
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <CTALink href={`/${locale}/pre-booking`} variant="light" size="lg">
+            {t.heroPrebook}
+          </CTALink>
+
+          <CTALink href={`/${locale}/story`} variant="light-outline" size="lg">
+            {t.heroExplore}
+          </CTALink>
+        </div>
+      </div>
+
+      {/* Right Logo */}
+      <div className="flex justify-center lg:justify-end">
         <img
           src="/logo1.png"
           alt="VISTAH"
-          className="h-32 w-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] md:h-44 lg:h-92"
+          className="h-40 w-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] md:h-56 lg:h-80"
         />
       </div>
 
     </div>
-
-    {/* Scroll cue */}
-    <a
-      href="#story-acronym"
-      aria-label="Scroll to explore"
-      className="group absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-white/80 transition-all duration-300 hover:text-white"
-    >
-      <span className="text-[10px] font-semibold uppercase tracking-[0.25em] drop-shadow-sm">
-        {t.scrollCue}
-      </span>
-
-      <span className="flex h-8 w-8 animate-bounce items-center justify-center rounded-full border border-white/60 bg-black/30 backdrop-blur-md">
-        ↓
-      </span>
-    </a>
-
   </div>
 </section>
+
+
+
+
       <section
         id="story-acronym"
         className="relative overflow-hidden bg-background py-20 md:py-32 scroll-mt-24"
