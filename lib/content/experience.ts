@@ -39,7 +39,7 @@ export const experienceHighlights: ExperienceHighlight[] = [
   },
   {
     id: "gastronomy",
-    image: "/images/food/ajos.jpg",
+    image: "/images/Ajos.jpg",
     kicker: { en: "Flavors of the valley", es: "Sabores del valle" },
     title: { en: "Local gastronomy", es: "Gastronomía local" },
     body: {
