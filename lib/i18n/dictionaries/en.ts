@@ -85,6 +85,7 @@ export const en = {
     heroPrebook: "Pre-Book Rooms & Events",
     heroExplore: "Explore the Story",
     whatIsVistah: "What is",
+    whatIsVistah2: " What is VISTAH?",
     kicker: "Our Story",
     title: "The meaning of VISTAH",
     intro:

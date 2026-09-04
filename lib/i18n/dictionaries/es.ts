@@ -86,7 +86,8 @@ export const es: Dictionary = {
       "Un hotel social contemporáneo entrelazado con la energía del nuevo Estadio Eladio Rosabal Cordero — donde la ciudad se reúne, celebra y pertenece.",
     heroPrebook: "Pre-Reserva Habitaciones y Eventos",
     heroExplore: "Explora la Historia",
-    whatIsVistah: "¿Qué es VISTAH?",
+    whatIsVistah: "¿Qué es ",
+    whatIsVistah2: "¿Qué es VISTAH?",
     kicker: "Nuestra Historia",
     title: "El significado de VISTAH",
     intro:

@@ -56,63 +56,65 @@ export default async function StoryPage({
 
   return (
     <main className="flex flex-col min-h-screen">
-     
- <section className="relative flex min-h-[92vh] items-end overflow-hidden">
-  <Image
-    src="/images/vistah-story.jpeg"
-    alt="Heredia city and surrounding mountains"
-    fill
-    priority
-    sizes="100vw"
-    className="object-cover object-center"
-  />
-
-  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/45 to-charcoal/30" />
-  <div className="absolute inset-0 bg-gradient-to-r from-charcoal/50 to-transparent" />
-
-  <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-16 md:pb-24 lg:px-8">
-    <div className="grid items-end gap-10 lg:grid-cols-2">
-
-      {/* Left Content */}
-      <div>
-        <p className="mb-5 font-sans text-xs font-medium uppercase tracking-[0.28em] text-champagne">
-          {t.heroKicker}
-        </p>
-
-        <h1 className="max-w-3xl text-balance font-serif text-4xl leading-[1.05] text-cream md:text-6xl lg:text-7xl">
-          {t.heroTitle}
-        </h1>
-
-        <p className="mt-6 max-w-xl text-pretty font-sans text-lg leading-relaxed text-cream/85">
-          {t.heroSubtitle}
-        </p>
-
-        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <CTALink href={`/${locale}/pre-booking`} variant="light" size="lg">
-            {t.heroPrebook}
-          </CTALink>
-
-          <CTALink href={`/${locale}/story`} variant="light-outline" size="lg">
-            {t.heroExplore}
-          </CTALink>
-        </div>
-      </div>
-
-      {/* Right Logo */}
-      <div className="flex justify-center lg:justify-end">
-        <img
-          src="/logo1.png"
-          alt="VISTAH"
-        className="h-40 w-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] md:h-56 lg:h-90"
+      <section className="relative flex min-h-[92vh] items-end overflow-hidden">
+        <Image
+          src="/images/vistah-story.jpeg"
+          alt="Heredia city and surrounding mountains"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
-      </div>
 
-    </div>
-  </div>
-</section>
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/45 to-charcoal/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/50 to-transparent" />
 
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-16 md:pb-24 lg:px-8">
+          <div className="grid items-end gap-10 lg:grid-cols-2">
+            {/* Left Content */}
+            <div>
+              <p className="mb-5 font-sans text-xs font-medium uppercase tracking-[0.28em] text-champagne">
+                {t.heroKicker}
+              </p>
 
+              <h1 className="max-w-3xl text-balance font-serif text-4xl leading-[1.05] text-cream md:text-6xl lg:text-7xl">
+                {t.heroTitle}
+              </h1>
 
+              <p className="mt-6 max-w-xl text-pretty font-sans text-lg leading-relaxed text-cream/85">
+                {t.heroSubtitle}
+              </p>
+
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <CTALink
+                  href={`/${locale}/pre-booking`}
+                  variant="light"
+                  size="lg"
+                >
+                  {t.heroPrebook}
+                </CTALink>
+
+                <CTALink
+                  href={`/${locale}/story`}
+                  variant="light-outline"
+                  size="lg"
+                >
+                  {t.heroExplore}
+                </CTALink>
+              </div>
+            </div>
+
+            {/* Right Logo */}
+            <div className="flex justify-center lg:justify-end">
+              <img
+                src="/logo1.png"
+                alt="VISTAH"
+                className="h-40 w-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] md:h-56 lg:h-90"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section
         id="story-acronym"
@@ -125,6 +127,13 @@ export default async function StoryPage({
             title={t.title}
             className="sr-only"
           />
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24 px-4">
+ 
+  <h2 className="font-sans text-3xl font-extrabold uppercase tracking-tight text-foreground  sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1]">
+    {t.whatIsVistah2}
+  </h2>
+  <div className="mt-4 h-1.5 w-16 mx-auto bg-primary rounded-full" />
+</div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {t.acronym.map((item, i) => (
               <Reveal key={item.letter} delay={i * 60} className="h-full">
