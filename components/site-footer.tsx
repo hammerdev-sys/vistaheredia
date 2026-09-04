@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
 import { siteConfig } from "@/lib/content/site";
 import { faqs } from "@/lib/content/faq";
@@ -193,8 +194,9 @@ export function SiteFooter({
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="text-sm text-cream/75 transition-colors hover:text-cream block"
+                  className="flex items-center gap-2.5 text-sm text-cream/75 transition-colors hover:text-cream"
                 >
+                  <Mail className="h-4 w-4 shrink-0 text-cream/50" />
                   {siteConfig.email}
                 </a>
               </li>
@@ -202,8 +204,9 @@ export function SiteFooter({
               <li>
                 <a
                   href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-                  className="text-sm text-cream/75 transition-colors hover:text-cream block"
+                  className="flex items-center gap-2.5 text-sm text-cream/75 transition-colors hover:text-cream"
                 >
+                  <Phone className="h-4 w-4 shrink-0 text-cream/50" />
                   {siteConfig.phone}
                 </a>
               </li>
