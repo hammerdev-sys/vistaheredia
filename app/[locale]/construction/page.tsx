@@ -90,7 +90,7 @@ export default async function ConstructionPage({
       </section>
 
       {/* Progress Gallery */}
-      <section className="bg-secondary/40 py-24 md:py-36 relative overflow-hidden">
+      {/* <section className="bg-secondary/40 py-24 md:py-36 relative overflow-hidden">
         <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
         <Container className="relative z-10">
@@ -125,7 +125,7 @@ export default async function ConstructionPage({
             ))}
           </div>
         </Container>
-      </section>
+      </section> */}
 
       {/* Timeline */}
       <section className="bg-background py-24 md:py-36">
