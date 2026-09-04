@@ -174,7 +174,7 @@ export default async function StoryPage({
       ===================================================== */}
 
       {/* =====================================================
-         VISTAH IN CONTEXT — MAPS
+         VISTAH IN CONTEXT — MAP
       ===================================================== */}
       <section className="overflow-hidden bg-[#f3efe7] py-16 md:py-20">
         <Container>
@@ -183,40 +183,18 @@ export default async function StoryPage({
             title={t.mapsTitle}
             align="center"
           />
-          <div className="mt-10 flex flex-col gap-6 lg:flex-row">
-            <Reveal className="w-full lg:w-1/2">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-sm">
-                <Image
-                  src="/images/map1.png"
-                  alt="VISTAH location across Costa Rica"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
-                />
-                <div className="absolute left-4 top-4 rounded-full bg-charcoal/80 px-4 py-1.5 backdrop-blur-sm">
-                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-cream">
-                    {t.mapsRegionLabel}
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-            <Reveal delay={100} className="w-full lg:w-1/2">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-sm">
-                <Image
-                  src="/images/map2.png"
-                  alt="VISTAH surrounding area map"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
-                />
-                <div className="absolute left-4 top-4 rounded-full bg-charcoal/80 px-4 py-1.5 backdrop-blur-sm">
-                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-cream">
-                    {t.mapsAreaLabel}
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
+          <Reveal className="mt-10">
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl shadow-sm md:aspect-[21/9]">
+              <iframe
+                title="VISTAH Heredia location on Google Maps"
+                src="https://www.google.com/maps?q=Estadio+Eladio+Rosabal+Cordero,+Heredia,+Costa+Rica&output=embed"
+                className="absolute inset-0 h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+          </Reveal>
         </Container>
       </section>
 
