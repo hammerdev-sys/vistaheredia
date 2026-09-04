@@ -24,7 +24,7 @@ export function PageHero({
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-center"
       />
 
       {/* Image Overlay */}

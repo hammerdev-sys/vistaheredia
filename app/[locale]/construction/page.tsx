@@ -40,14 +40,15 @@ export default async function ConstructionPage({
   const t = dict.construction
 
   return (
-    <div className="flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
-      <PageHero
-        kicker={t.kicker}
-        title={t.title}
-        intro={t.intro}
-        image="/images/construction-3.png"
-        imageAlt="VISTAH Heredia under construction with facade installation in progress"
-      />
+<div className="flex min-h-screen flex-col overflow-hidden bg-background text-foreground">
+  <PageHero
+    kicker={t.kicker}
+    title={t.title}
+    intro={t.intro}
+    image="/images/Principal3.png"
+    imageAlt="VISTAH Heredia under construction with facade installation in progress"
+  />
+
 
       {/* Status Banner */}
     <section className="border-b border-border bg-primary text-primary-foreground">

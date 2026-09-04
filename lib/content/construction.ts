@@ -68,7 +68,7 @@ export const progressUpdates: ProgressUpdate[] = [
 
 /** Design renders shown on the construction page. */
 export const designRenders: { id: string; image: string; label: LocalizedText }[] = [
-  { id: "exterior", image: "/images/exterior-day.png", label: { en: "Exterior", es: "Exterior" } },
+  { id: "exterior", image: "/images/Lateral1.png", label: { en: "Exterior", es: "Exterior" } },
   { id: "lobby", image: "/images/lobbyandcoffee.png", label: { en: "Lobby & Coffee", es: "Lobby y Café" } },
   { id: "room", image: "/images/guest-room.jpg", label: { en: "Guest Room", es: "Habitación" } },
   { id: "ballroom", image: "/images/ballroom3.png", label: { en: "Ballroom", es: "Salón de Eventos" } },
