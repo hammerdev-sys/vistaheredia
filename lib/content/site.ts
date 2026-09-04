@@ -11,7 +11,7 @@ export const siteConfig = {
   email: 'info@vistaheredia.com',
   salesEmail: 'sales@vistaheredia.com',
   careersEmail: 'careers@vistaheredia.com',
-  phone: '+506 2222 0000',
+  phone: 'Coming Soon',
   addressLine1: 'Estadio Eladio Rosabal Cordero',
   addressLine2: 'Heredia, Costa Rica',
   lat: 10.0022,
@@ -20,7 +20,7 @@ export const siteConfig = {
   hiltonTapestryUrl: 'https://www.hilton.com/en/tapestry/',
   // Coordinates are approximate to Heredia; update with the exact site location.
   mapEmbedSrc:
-    'https://www.openstreetmap.org/export/embed.html?bbox=-84.13%2C9.99%2C-84.09%2C10.01&layer=mapnik&marker=10.0022%2C-84.1165',
+    'https://www.google.com/maps?q=10.0022,-84.1165+(VISTAH+Heredia)&z=15&output=embed',
   social: [
     { name: 'Instagram', href: 'https://instagram.com' },
     { name: 'Facebook', href: 'https://facebook.com' },
